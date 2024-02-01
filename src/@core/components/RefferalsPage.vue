@@ -148,6 +148,7 @@
       <p class = "card-about__information">{{ funds_withdrawn }}</p>
     </div>
   </v-container>
+
   <v-container class = "table-create-link">
     <div class = "table-create-link__flex-left">
        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
@@ -158,6 +159,39 @@
       <button class = "table-create-link__button">Добавить ссылку</button>
     </div>
   </v-container>
+
+  <v-container class = "table-referals">
+    <div class = "table-referals__flex-left">
+      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
+          <g clip-path="url(#clip0_0_202)">
+          <path d="M17.9759 17.6642C17.8518 17.6642 17.7264 17.6345 17.6109 17.5715C15.5856 16.4664 12.8188 14.6067 12.1725 11.2285C11.9479 10.0498 12.1341 8.16139 13.397 6.71657C14.0989 5.91376 15.4067 4.95703 17.652 4.95703C21.0074 4.95703 22.668 7.06921 23.103 9.04611C23.6278 11.4321 22.5296 14.5317 19.4157 15.8389C19.0421 15.9955 18.608 15.8335 18.4434 15.4777C18.2795 15.1215 18.4489 14.7062 18.8216 14.55C21.2168 13.5447 22.0619 11.166 21.6593 9.33548C21.2498 7.4754 19.7519 6.36493 17.6517 6.36493C16.307 6.36493 15.2565 6.78673 14.5291 7.61874C13.6527 8.62129 13.4422 10.0273 13.6228 10.976C14.0307 13.107 15.5297 14.8142 18.342 16.3491C18.6959 16.542 18.8181 16.9718 18.6162 17.3092C18.4805 17.537 18.2317 17.6642 17.9759 17.6642Z" fill="#9155FD"/>
+          <path d="M27.3305 26.9572H15.8004C15.3929 26.9572 15.063 26.6418 15.063 26.2529C15.063 25.8639 15.3934 25.5493 15.8004 25.5493H26.5899C26.5643 22.5776 26.3723 20.6262 26.0175 19.7443C25.5457 18.5674 23.5154 17.5078 22.2778 16.9876C21.4135 18.4081 20.1173 19.3603 18.642 19.6356C17.0786 19.9273 15.4817 19.4296 14.1451 18.2327C13.8479 17.9669 13.8332 17.5214 14.1115 17.2377C14.39 16.9541 14.8564 16.94 15.1538 17.2057C16.1491 18.0973 17.2573 18.4595 18.3584 18.2537C19.5612 18.029 20.6198 17.1343 21.2628 15.7993C21.4238 15.4653 21.8268 15.3067 22.1876 15.4329C22.6266 15.587 26.4976 17.0039 27.394 19.2398C27.9975 20.7415 28.067 23.9615 28.067 26.2529C28.0675 26.6418 27.7375 26.9572 27.3305 26.9572Z" fill="#9155FD"/>
+          <path d="M10.9825 26.9568C7.6966 26.9568 5.02344 24.4045 5.02344 21.267C5.02344 18.1301 7.6966 15.5781 10.9825 15.5781C14.2682 15.5781 16.9414 18.1301 16.9414 21.267C16.9414 24.4045 14.2682 26.9568 10.9825 26.9568ZM10.9825 16.9864C8.50976 16.9864 6.49786 18.9069 6.49786 21.2673C6.49786 23.6281 8.50976 25.5489 10.9825 25.5489C13.455 25.5489 15.4671 23.6281 15.4671 21.267C15.4671 18.9069 13.455 16.9864 10.9825 16.9864Z" fill="#9155FD"/>
+          <path d="M9.98262 24.8291C9.58949 24.8291 9.19601 24.6861 8.89641 24.4001L8.3999 23.9266C8.11155 23.6517 8.11155 23.2059 8.39954 22.9309C8.68754 22.656 9.15451 22.656 9.44215 22.9309L9.93902 23.4044C9.9617 23.4263 10.0037 23.4266 10.0264 23.4044L11.7621 21.748C11.7853 21.7263 11.7848 21.6862 11.7617 21.6645L11.2656 21.19C10.9776 20.9148 10.9776 20.469 11.2659 20.1944C11.5539 19.9194 12.0209 19.9194 12.3085 20.1952L12.8051 20.6696C13.4039 21.2416 13.4039 22.1716 12.8051 22.7433L11.069 24.4001C10.7694 24.6861 10.3759 24.8291 9.98262 24.8291Z" fill="#9155FD"/>
+          <path d="M10.1764 22.5469C9.98739 22.5469 9.79891 22.4779 9.65474 22.3406L9.1577 21.8663C8.55903 21.294 8.55938 20.3634 9.15893 19.7919L10.8943 18.1354C11.4929 17.5644 12.4671 17.5641 13.0669 18.1354L13.5637 18.6098C13.8517 18.8847 13.8517 19.3305 13.5637 19.6051C13.2757 19.8804 12.8084 19.8804 12.5208 19.6051L12.0243 19.1311C12.0011 19.1093 11.959 19.1093 11.9367 19.1314L10.2015 20.7876C10.1804 20.8077 10.1804 20.8515 10.2012 20.871L10.6977 21.3455C10.9857 21.6204 10.9857 22.0662 10.6977 22.3406C10.5542 22.4779 10.3652 22.5469 10.1764 22.5469Z" fill="#9155FD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_0_202">
+          <rect width="23" height="22" fill="white" transform="translate(5 5)"/>
+          </clipPath>
+          </defs>
+      </svg>
+      <h1 class = "table-referals__title">Рефералы</h1>
+    </div>
+  </v-container>
+
+  <VDataTable
+    :headers="headers"
+    :items="data"
+    :items-per-page="1"
+    class="text-no-wrap"
+  >
+    <template #item.id="{ item }">
+      <span class="text-h6">{{ item.id }}</span>
+    </template>
+  </VDataTable>
+
 </template>
 
 <script>
@@ -174,7 +208,41 @@ export default {
   })
 }
 </script>
-
+<script setup>
+// import data from '@/views/demos/forms/tables/data-table/datatable'
+const data = [
+  {
+    id: 1,
+    name: 'Ivan',
+  },
+]
+const headers = [
+  {
+    title: 'ID',
+    key: 'id',
+  }
+  // {
+  //   title: 'NAME',
+  //   key: 'fullName',
+  // },
+  // {
+  //   title: 'EMAIL',
+  //   key: 'email',
+  // },
+  // {
+  //   title: 'DATE',
+  //   key: 'startDate',
+  // },
+  // {
+  //   title: 'EXPERIENCE',
+  //   key: 'experience',
+  // },
+  // {
+  //   title: 'AGE',
+  //   key: 'age',
+  // },
+]
+</script>
 <style>
 
 .top-card{
@@ -225,23 +293,22 @@ export default {
     justify-content: center;
   }
   .card-about__title{
-  text-align: center;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  margin: 0;
-  margin-left: 5px;
-  /* margin-bottom: 8px;  */
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+    margin-left: 5px;
   }
   .card-about__information{
-  margin: 0;
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 100% */
-  text-transform: capitalize;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: capitalize;
   }
   .card-about__divider{
     height: 110%;
@@ -280,5 +347,23 @@ export default {
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+  }
+.table-referals{
+  flex-wrap: nowrap;
+  border-radius: 10px;
+  border: 1px solid #D3D3D3;
+  background: rgba(252, 252, 252, 0.85);
+  margin-top:12px;
+}
+  .table-referals__flex-left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .table-referals__title{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
   }
 </style>
