@@ -158,6 +158,16 @@
       <h1 class = "table-create-link__title">Создать реферальную ссылку</h1>
       <button class = "table-create-link__button">Добавить ссылку</button>
     </div>
+    <VDataTable
+    :headers="headers"
+    :items="data"
+    :items-per-page="5"
+    class="text-no-wrap table-referals__header-table"
+    >
+    <template #item.id="{ item }">
+      <span class="text-h6">{{ item.id }}</span>
+    </template>
+  </VDataTable>
   </v-container>
 
   <v-container class = "table-referals">
@@ -179,18 +189,19 @@
       </svg>
       <h1 class = "table-referals__title">Рефералы</h1>
     </div>
-  </v-container>
-
-  <VDataTable
-    :headers="headers"
-    :items="data"
-    :items-per-page="1"
-    class="text-no-wrap"
-  >
+    <VDataTable
+    :headers="headers_referals"
+    :items="data_referals"
+    :items-per-page="5"
+    class="text-no-wrap table-referals__header-table"
+    >
     <template #item.id="{ item }">
       <span class="text-h6">{{ item.id }}</span>
     </template>
   </VDataTable>
+  </v-container>
+
+  
 
 </template>
 
@@ -209,38 +220,81 @@ export default {
 }
 </script>
 <script setup>
+import { VDataTable } from 'vuetify/labs/VDataTable'
 // import data from '@/views/demos/forms/tables/data-table/datatable'
 const data = [
   {
     id: 1,
-    name: 'Ivan',
+    link: 'https://t.me/AVmessage_bot?start=26413346',
+    invite_friends: '92 чел',
+    note: 'Главный менеджер'
+  },
+  {
+    id: 2,
+    fullName: 'Ivan2',
+  },
+  {
+    id: 3,
+    fullName: 'Ivan3',
   },
 ]
 const headers = [
   {
-    title: 'ID',
-    key: 'id',
+    title: 'Ссылка',
+    key: 'link',
+  },
+  {
+    title: 'Приглашено людей',
+    key: 'invite_friends',
+  },
+  {
+    title: 'Примечание',
+    key: 'note',
   }
-  // {
-  //   title: 'NAME',
-  //   key: 'fullName',
-  // },
-  // {
-  //   title: 'EMAIL',
-  //   key: 'email',
-  // },
-  // {
-  //   title: 'DATE',
-  //   key: 'startDate',
-  // },
-  // {
-  //   title: 'EXPERIENCE',
-  //   key: 'experience',
-  // },
-  // {
-  //   title: 'AGE',
-  //   key: 'age',
-  // },
+]
+const headers_referals = [
+  {
+    title: 'Имя Telegram',
+    key: 'telegram_name',
+  },
+  {
+    title: 'ID Telegram',
+    key: 'telegram_id',
+  },
+  {
+    title: 'Приглашен',
+    key: 'invited',
+  },
+  {
+    title: 'Партнерский %',
+    key: 'procent',
+  },
+  {
+    title: 'Начислено',
+    key: 'summ',
+  },
+  {
+    title: 'Ссылка',
+    key: 'link',
+  }
+]
+const data_referals = [
+  {
+    telegram_name: 'AV Message',
+    telegram_id: '12354667',
+    invited: '15.01.24',
+    procent: '10%',
+    summ: '10р',
+    link: 'undefined'
+  },
+  {
+    id: 2,
+    fullName: 'Ivan2',
+  },
+  {
+    id: 3,
+    fullName: 'Ivan3',
+  },
 ]
 </script>
 <style>
@@ -366,4 +420,23 @@ const headers = [
     font-size: 23px;
     font-weight: 700;
   }
+  .v-data-table__td{
+    background: #00808900 !important;
+  }
+  .v-data-table__td{
+    background: #00808900 !important;
+  }
+  .v-data-table__tr:nth-child(even) {
+  background-color: #fbfbfb !important;
+}
+
+.v-data-table__tr:nth-child(odd) {
+  background: #f5f2fb !important;
+  
+}
+span{
+  font-size: 17px;
+  color: #777777;
+  font-weight: 600;
+}
 </style>
