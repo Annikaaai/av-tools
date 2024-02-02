@@ -231,11 +231,15 @@ const data = [
   },
   {
     id: 2,
-    fullName: 'Ivan2',
+    link: 'https://t.me/AVmessage_bot?start=26413346',
+    invite_friends: '92 чел',
+    note: 'Главный менеджер'
   },
   {
     id: 3,
-    fullName: 'Ivan3',
+    link: 'https://t.me/AVmessage_bot?start=26413346',
+    invite_friends: '92 чел',
+    note: 'Главный менеджер'
   },
 ]
 const headers = [
@@ -286,15 +290,7 @@ const data_referals = [
     procent: '10%',
     summ: '10р',
     link: 'undefined'
-  },
-  {
-    id: 2,
-    fullName: 'Ivan2',
-  },
-  {
-    id: 3,
-    fullName: 'Ivan3',
-  },
+  }
 ]
 </script>
 <style>
