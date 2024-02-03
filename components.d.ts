@@ -338,6 +338,7 @@ declare module '@vue/runtime-core' {
     ErrorHeader: typeof import('./src/components/ErrorHeader.vue')['default']
     I18n: typeof import('./src/@core/components/I18n.vue')['default']
     MoreBtn: typeof import('./src/@core/components/MoreBtn.vue')['default']
+    NewsPage: typeof import('./src/@core/components/NewsPage.vue')['default']
     Notifications: typeof import('./src/@core/components/Notifications.vue')['default']
     PricingPlanDialog: typeof import('./src/components/dialogs/PricingPlanDialog.vue')['default']
     ReferAndEarnDialog: typeof import('./src/components/dialogs/ReferAndEarnDialog.vue')['default']
