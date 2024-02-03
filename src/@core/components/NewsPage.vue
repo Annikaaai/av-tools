@@ -49,13 +49,179 @@
               </defs>
       </svg>
       <h1 class = "top-card__h1">AV-Tools</h1>
-      <p class="top-card__text">Реферальная система</p>
+      <p class="top-card__text">Новости и обновления сервиса</p>
   </v-container>
+  <v-container class = "cards_grid">
+        <div class = "cards">
+            <div class = "news-anons__title-wrap">
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
+                    <g clip-path="url(#clip0_1425_594)">
+                    <path d="M23.2292 26H9.96875C8.33158 26 7 24.6684 7 23.0312V9.17708C7 7.97613 7.97613 7 9.17708 7H19.0729C20.2739 7 21.25 7.97613 21.25 9.17708V9.375H23.8229C25.0239 9.375 26 10.3511 26 11.5521V23.0312C26 24.5481 24.8568 25.8021 23.3867 25.9786C23.3368 25.9929 23.2838 26 23.2292 26ZM21.25 10.5625V23.0312C21.25 24.0137 22.0488 24.8125 23.0312 24.8125C24.0137 24.8125 24.8125 24.0137 24.8125 23.0312V11.5521C24.8125 11.0066 24.3684 10.5625 23.8229 10.5625H21.25ZM9.17708 8.1875C8.63163 8.1875 8.1875 8.63163 8.1875 9.17708V23.0312C8.1875 24.0137 8.98629 24.8125 9.96875 24.8125H20.6578C20.2842 24.3161 20.0625 23.6986 20.0625 23.0312V9.17708C20.0625 8.63163 19.6184 8.1875 19.0729 8.1875H9.17708Z" fill="#9155FD"/>
+                    <path d="M13.5312 14.125H9.96875C9.641 14.125 9.375 13.859 9.375 13.5312V9.96875C9.375 9.641 9.641 9.375 9.96875 9.375H13.5312C13.859 9.375 14.125 9.641 14.125 9.96875V13.5312C14.125 13.859 13.859 14.125 13.5312 14.125ZM10.5625 12.9375H12.9375V10.5625H10.5625V12.9375Z" fill="#9155FD"/>
+                    <path d="M18.2819 11.3545H16.3027C15.975 11.3545 15.709 11.0885 15.709 10.7607C15.709 10.433 15.975 10.167 16.3027 10.167H18.2819C18.6097 10.167 18.8757 10.433 18.8757 10.7607C18.8757 11.0885 18.6097 11.3545 18.2819 11.3545Z" fill="#9155FD"/>
+                    <path d="M18.2812 16.8955H9.96875C9.641 16.8955 9.375 16.6295 9.375 16.3018C9.375 15.974 9.641 15.708 9.96875 15.708H18.2812C18.609 15.708 18.875 15.974 18.875 16.3018C18.875 16.6295 18.609 16.8955 18.2812 16.8955Z" fill="#9155FD"/>
+                    <path d="M18.2812 19.8643H9.96875C9.641 19.8643 9.375 19.5983 9.375 19.2705C9.375 18.9428 9.641 18.6768 9.96875 18.6768H18.2812C18.609 18.6768 18.875 18.9428 18.875 19.2705C18.875 19.5983 18.609 19.8643 18.2812 19.8643Z" fill="#9155FD"/>
+                    <path d="M18.2812 22.833H9.96875C9.641 22.833 9.375 22.567 9.375 22.2393C9.375 21.9115 9.641 21.6455 9.96875 21.6455H18.2812C18.609 21.6455 18.875 21.9115 18.875 22.2393C18.875 22.567 18.609 22.833 18.2812 22.833Z" fill="#9155FD"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1425_594">
+                    <rect width="19" height="19" fill="white" transform="translate(7 7)"/>
+                    </clipPath>
+                    </defs>
+            </svg>
+            <h1 class = "news-anons__title">Новости и анонсы:</h1>
+        </div>
+
+
+        <div class = "news-card">
+            <p class = "news-card_data">23.01.2023 | Обновление — v3.2</p>
+            <div class = "news-card__sections">
+                <div class = "news-card__sections_text">Разделы:</div>
+                <div class = "news-card__sections-ad">Объявления</div>
+                <div class = "news-card__sections-auto">Автоответчик</div>
+            </div>
+            <div class = "news-card__white-card"> 
+                <h2 class = "news-card__title">Новое</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.</p>
+                </div>
+                <h2 class = "news-card__title">Исправлено</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.</p>
+                </div>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "news-card">
+            <p class = "news-card_data">23.01.2023 | Обновление — v3.2</p>
+            <div class = "news-card__sections">
+                <div class = "news-card__sections_text">Разделы:</div>
+                <div class = "news-card__sections-ad">Объявления</div>
+                <div class = "news-card__sections-auto">Автоответчик</div>
+            </div>
+            <div class = "news-card__white-card"> 
+                <h2 class = "news-card__title">Новое</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.</p>
+                </div>
+                <h2 class = "news-card__title">Исправлено</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.</p>
+                </div>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "news-card">
+            <p class = "news-card_data">23.01.2023 | Обновление — v3.2</p>
+            <div class = "news-card__sections">
+                <div class = "news-card__sections_text">Разделы:</div>
+                <div class = "news-card__sections-ad">Объявления</div>
+                <div class = "news-card__sections-auto">Автоответчик</div>
+            </div>
+            <div class = "news-card__white-card"> 
+                <h2 class = "news-card__title">Новое</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.</p>
+                </div>
+                <h2 class = "news-card__title">Исправлено</h2>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.</p>
+                </div>
+                <div class = "news-card__information-wrap">
+                    <div>
+                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
+                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
+                        </svg> 
+                    </div>
+                    <p class = "news-card__information-text">Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div>
+            <div class = "right-card">
+            <p>Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
+            <div class = "right-card__divider"></div>
+            
+            <div class = "right-card__text-wrap">
+                <div>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
+                        <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="white" fill-opacity="0.89"/>
+                    </svg>
+                </div>
+                <p class = "right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
+            </div>
+            <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
+            <textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
+        </div>
+        </div>
+        
+  </v-container>
+
+
+
+
 </template>
 <script>
 
 export default {
-  name: 'NewsPage'
+  name: 'NewsPage' 
 }
 </script> 
 <style>
@@ -73,5 +239,131 @@ export default {
   border: 1px solid #D8E2EF;
   line-height: 27.65px;
 
+}
+.top-card__h1{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+  }
+  .top-card__text{
+    color: #5B5B5B;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0px 0px 0px 70px;
+  }
+.news-anons__title-wrap{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.news-anons__title{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+}
+.news-card{
+    margin-bottom: 20px;
+}
+.news-card__white-card{
+    background: #FFFFFF;
+    border-radius: 17px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.news-card__sections{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+ }
+.news-card_data{
+    margin-top: 30px;
+    color: #584D53;
+    font-size: 19px;
+    font-weight: 500;
+}
+.news-card__sections_text{
+    font-size: 19px;
+    font-weight: 500;
+}
+.news-card__sections-ad{
+    background: #E9DDFF;
+    font-size: 16px;
+    color: #9155FD;
+    border-radius: 26px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+.news-card__sections-auto{
+    background: #D3E6FF;
+    font-size: 16px;
+    color: #2C7BE5;
+    border-radius: 26px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+.news-card__title{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 20px;
+    font-weight: 500;
+}
+.news-card__information-wrap{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+}
+.news-card__information-text{
+    margin-left: 10px;
+}
+.right-card{
+    margin-left: 30px;
+    margin-right: 0px;
+    background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
+    border-radius: 17px;
+    width: auto;
+    padding: 15px;
+    color: #FFFFFF;
+}
+.cards_grid{
+    display: grid;
+    grid-template-columns: 65% 36%;
+}
+.right-card__text-wrap{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+}
+.right-card__information-text{
+    margin-left: 10px;
+    font-weight: 300;
+}
+.right-card__opinion-button{
+    background: #E9DDFF;
+    border-radius: 26px;
+    color: #9155FD;
+    font-weight: 300;
+    padding: 7px 10px;
+    font-size: 16px;
+    float: right;
+}
+.right-card__textarea{
+    background-color: #FFFFFF;
+    border-radius: 17px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+}
+.right-card__textarea:focus {
+    outline: none !important;
+    border: none;
+}
+.right-card__divider{
+    width: 100%;
+    height: 1px;
+    background: #dac5ff84;
+    margin-bottom: 10px;
 }
 </style>

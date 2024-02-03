@@ -1,6 +1,6 @@
 <script setup>
 import { useTheme } from 'vuetify'
-import RefferalsPage from '@core/components/RefferalsPage.vue'
+import NewsPage from '@core/components/NewsPage.vue'
 import ScrollToTop from '@core/components/ScrollToTop.vue'
 import { useThemeConfig } from '@core/composable/useThemeConfig'
 import { hexToRgb } from '@layouts/utils'
@@ -26,7 +26,7 @@ handleSkinChanges()
     <VApp :style="`--v-global-theme-primary: ${hexToRgb(global.current.value.colors.primary)}`">
       <!-- <RouterView />
       <ScrollToTop /> -->
-      <RefferalsPage/>
+      <NewsPage/>
     </VApp>
   </VLocaleProvider>
 </template>
