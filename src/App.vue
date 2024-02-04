@@ -1,6 +1,8 @@
 <script setup>
 import { useTheme } from 'vuetify'
 import NewsPage from '@core/components/NewsPage.vue'
+import VideoPage from '@core/components/VideoPage.vue'
+import AddManager from '@core/components/AddManager.vue'
 import ScrollToTop from '@core/components/ScrollToTop.vue'
 import { useThemeConfig } from '@core/composable/useThemeConfig'
 import { hexToRgb } from '@layouts/utils'
@@ -26,7 +28,7 @@ handleSkinChanges()
     <VApp :style="`--v-global-theme-primary: ${hexToRgb(global.current.value.colors.primary)}`">
       <!-- <RouterView />
       <ScrollToTop /> -->
-      <NewsPage/>
+      <AddManager/>
     </VApp>
   </VLocaleProvider>
 </template>

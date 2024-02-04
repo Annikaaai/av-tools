@@ -52,6 +52,38 @@
       <p class="top-card__text">Новости и обновления сервиса</p>
   </v-container>
   <v-container class = "cards_grid">
+    <div class = "right-card__order">
+    <div class = "right-card">
+            <p class = "right-card__title">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
+            <div class = "right-card__divider"></div>
+            
+            <div class = "right-card__text-wrap">
+                <div>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
+                        <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="white" fill-opacity="0.89"/>
+                    </svg>
+                </div>
+                <p class = "right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
+            </div>
+            <div class = "right-card__opinion-button-center-wrap">
+                <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
+            </div>
+            <div><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
+                
+                <button class = "right-card__textarea-svg">
+
+                <svg width="23" height="25" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8159 7.32493L3.36306 0.32381C2.6278 0.0288319 1.79714 0.158594 1.1953 0.662287C0.593464 1.16606 0.341744 1.94227 0.538456 2.68796L2.09191 8.08981L9.69783 8.30986C10.0478 8.30986 10.3316 8.8517 10.3316 9.19009C10.3316 9.52845 10.0479 10.0703 9.69783 10.0703H2.09191L0.538456 15.6922C0.341744 16.4379 0.593422 17.2141 1.1953 17.7179C1.79836 18.2226 2.62911 18.3507 3.3631 18.0563L20.8159 11.0552C21.6105 10.7365 22.1041 10.0218 22.1041 9.19009C22.1041 8.35838 21.6105 7.64364 20.8159 7.32493Z" fill="#B0B0B0"/>
+                </svg></button>
+                <button class = "right-card__textarea-svg">
+                <svg width="26" height="23" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.518 2.86581C21.0331 1.31904 18.6982 0.0633221 16.0078 2.86581L5.1011 14.2262C5.01712 14.3047 4.01333 15.2865 3.97801 16.7106C3.95603 17.5903 4.30214 18.4103 5.00849 19.1461C5.61123 19.7739 6.33249 20.1001 7.0922 20.0903C8.46879 20.0731 9.49534 18.9924 9.60679 18.8697L17.8122 10.3233C18.119 10.0036 18.1198 9.48697 17.8122 9.16731C17.5053 8.84766 17.0093 8.84766 16.7024 9.16731L8.48449 17.7276C8.28906 17.9369 7.6769 18.4503 7.0663 18.4552C6.73197 18.4577 6.42196 18.3048 6.11823 17.9893C5.72582 17.5805 5.53903 17.1799 5.54688 16.7621C5.56022 16.0206 6.17866 15.4157 6.18494 15.4083L17.1176 4.02179C18.1787 2.91731 19.5184 2.05237 21.4082 4.02179C22.1004 4.74285 22.4434 5.49007 22.4301 6.24383C22.4073 7.48239 21.4435 8.42418 21.4333 8.43399L9.17513 21.0599C9.14845 21.0877 7.63295 22.6835 5.78782 22.6966C4.81699 22.7031 3.89482 22.2584 3.04721 21.3763C-0.156457 18.0391 2.84158 14.7085 2.97029 14.5687L12.3984 4.74694C12.7053 4.42729 12.7053 3.91061 12.3984 3.59014C12.0908 3.27048 11.5948 3.2713 11.2887 3.59014L1.84878 13.4234C0.374871 15.0224 -1.48595 18.9662 1.93668 22.5323C3.09665 23.7397 4.40025 24.3447 5.81137 24.3308C8.32124 24.3079 10.2127 22.2944 10.2919 22.2085L22.5148 9.61859C22.5494 9.5867 23.9526 8.24024 23.9989 6.29615C24.028 5.07313 23.5296 3.91878 22.518 2.86581Z" fill="#B0B0B0"/>
+                </svg></button>
+            </div>
+        </div>
+    </div>
+
         <div class = "cards">
             <div class = "news-anons__title-wrap">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,24 +225,7 @@
         </div>
         </div>
 
-        <div>
-            <div class = "right-card">
-            <p>Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
-            <div class = "right-card__divider"></div>
-            
-            <div class = "right-card__text-wrap">
-                <div>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
-                        <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="white" fill-opacity="0.89"/>
-                    </svg>
-                </div>
-                <p class = "right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
-            </div>
-            <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
-            <textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
-        </div>
-        </div>
+       
         
   </v-container>
 
@@ -324,7 +339,7 @@ export default {
     background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
     border-radius: 17px;
     width: auto;
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
     color: #FFFFFF;
 }
 .cards_grid{
@@ -365,5 +380,52 @@ export default {
     height: 1px;
     background: #dac5ff84;
     margin-bottom: 10px;
+}
+.right-card__order{
+    order: 2;
+}
+.cards{
+    order: 1;
+}
+.right-card__textarea-svg{
+    float: right;
+    margin: -40px 10px 10px 10px;
+    position: relative;
+}
+@media(max-width: 650px){
+    .cards_grid{
+        display: block;
+    }
+    .right-card{
+        margin: 0px 0px 10px 0px;
+    }
+    
+
+}
+@media(max-width: 500px){
+    .right-card__textarea{
+        height: 100px;
+        margin-top: 15px;
+    }
+    .right-card__text-wrap, .right-card__divider{
+        display: none;
+    }
+    .right-card{
+        text-align: center;
+    }
+    .right-card__opinion-button-center-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-card{
+        background: none;
+    }
+    .right-card__title{
+        background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
+        border-radius: 17px;
+        width: auto;
+        padding: 15px 15px 15px 15px;
+    }
 }
 </style>

@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     AddEditAddressDialog: typeof import('./src/components/dialogs/AddEditAddressDialog.vue')['default']
     AddEditPermissionDialog: typeof import('./src/components/dialogs/AddEditPermissionDialog.vue')['default']
     AddEditRoleDialog: typeof import('./src/components/dialogs/AddEditRoleDialog.vue')['default']
+    AddManager: typeof import('./src/@core/components/AddManager.vue')['default']
     AppBarSearch: typeof import('./src/@core/components/AppBarSearch.vue')['default']
     AppCardActions: typeof import('./src/@core/components/cards/AppCardActions.vue')['default']
     AppCardCode: typeof import('./src/@core/components/cards/AppCardCode.vue')['default']
@@ -357,5 +358,6 @@ declare module '@vue/runtime-core' {
     TwoFactorAuthDialog: typeof import('./src/components/dialogs/TwoFactorAuthDialog.vue')['default']
     UserInfoEditDialog: typeof import('./src/components/dialogs/UserInfoEditDialog.vue')['default']
     UserUpgradePlanDialog: typeof import('./src/components/dialogs/UserUpgradePlanDialog.vue')['default']
+    VideoPage: typeof import('./src/@core/components/VideoPage.vue')['default']
   }
 }
