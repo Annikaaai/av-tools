@@ -53,9 +53,9 @@
   </v-container>
 
   <v-container class = "card-about">
-    <div class = "card-about__column">
-      <div class = "card-about__flex-content">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 25" fill="none">
+    <div class = "card-about__flex-content card-about__column">
+      <div>
+        <svg class = "card-about__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 25" fill="none">
               <g clip-path="url(#clip0_0_214)">
               <path d="M14.1039 14.3911C13.9689 14.3911 13.8327 14.3574 13.7071 14.2859C11.5057 13.0301 8.49828 10.9167 7.79577 7.07779C7.55172 5.73845 7.7541 3.59249 9.12683 1.95065C9.88974 1.03836 11.3112 -0.0488281 13.7518 -0.0488281C17.3989 -0.0488281 19.204 2.35138 19.6768 4.59785C20.2472 7.30915 19.0536 10.8315 15.6688 12.3169C15.2627 12.4949 14.7909 12.3108 14.612 11.9064C14.4339 11.5017 14.6179 11.0298 15.0231 10.8522C17.6266 9.70993 18.5452 7.00684 18.1076 4.92668C17.6625 2.81296 16.0342 1.55106 13.7515 1.55106C12.2899 1.55106 11.148 2.03037 10.3574 2.97585C9.40471 4.1151 9.17595 5.71289 9.37222 6.79092C9.81559 9.21249 11.445 11.1525 14.5017 12.8967C14.8865 13.1159 15.0193 13.6044 14.7999 13.9877C14.6523 14.2466 14.3819 14.3911 14.1039 14.3911Z" fill="white"/>
               <path d="M24.2727 24.9512H11.74C11.297 24.9512 10.9385 24.5928 10.9385 24.1508C10.9385 23.7087 11.2976 23.3513 11.74 23.3513H23.4677C23.4398 19.9743 23.2311 17.7568 22.8455 16.7547C22.3327 15.4173 20.1258 14.2132 18.7806 13.6221C17.8411 15.2363 16.4323 16.3183 14.8287 16.6311C13.1294 16.9626 11.3935 16.3971 9.94073 15.0369C9.61775 14.7348 9.6017 14.2286 9.90422 13.9063C10.2069 13.5839 10.7139 13.5679 11.0371 13.8698C12.119 14.883 13.3235 15.2946 14.5204 15.0608C15.8278 14.8054 16.9785 13.7888 17.6774 12.2717C17.8524 11.8921 18.2904 11.7119 18.6826 11.8553C19.1598 12.0304 23.3674 13.6406 24.3417 16.1814C24.9978 17.8879 25.0732 21.5469 25.0732 24.1508C25.0738 24.5928 24.7151 24.9512 24.2727 24.9512Z" fill="white"/>
@@ -69,27 +69,33 @@
               </clipPath>
               </defs>
         </svg>
-        <p class = "card-about__title">Всего рефералов</p>
       </div>
-      <p class = "card-about__information">{{ count_of_people }} чел</p>
+      <div class = "card-about__flex-content-text">
+        <div class = "card-about__title">Всего рефералов</div>
+        <div class = "card-about__information">{{ count_of_people }} чел</div>
+      </div>
     </div>
     <div class = "card-about__divider"></div>
-    <div class = "card-about__column">
-      <div class = "card-about__flex-content">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="none">
+    <div class = "card-about__flex-content card-about__column">
+      <div>
+          <svg class = "card-about__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="none">
                   <path d="M28 11C27.7348 11 27.4804 11.1054 27.2929 11.2929C27.1054 11.4804 27 11.7348 27 12V23.26C23.5008 24.2723 19.7767 24.1991 16.32 23.05C12.6612 21.8425 8.73325 21.7072 5 22.66V8.74C8.50428 7.74388 12.2283 7.83454 15.68 9C19.7836 10.36 24.2164 10.36 28.32 9C28.572 8.91513 28.7799 8.73364 28.898 8.49547C29.0162 8.2573 29.0349 7.98195 28.95 7.73C28.8651 7.47804 28.6836 7.27012 28.4455 7.15197C28.2073 7.03382 27.932 7.01513 27.68 7.1C23.9916 8.3198 20.0084 8.3198 16.32 7.1C12.2164 5.74002 7.78359 5.74002 3.68 7.1C3.48925 7.16417 3.32231 7.2844 3.20099 7.44497C3.07967 7.60554 3.00962 7.79898 3 8V24C3.00073 24.1586 3.0392 24.3148 3.11223 24.4557C3.18527 24.5965 3.29076 24.718 3.42 24.81C3.54822 24.9029 3.69667 24.9641 3.85314 24.9884C4.0096 25.0128 4.16962 24.9996 4.32 24.95C8.00843 23.7302 11.9916 23.7302 15.68 24.95C19.7836 26.31 24.2164 26.31 28.32 24.95C28.5186 24.8829 28.6911 24.7551 28.8132 24.5846C28.9352 24.4142 29.0005 24.2096 29 24V12C29 11.7348 28.8946 11.4804 28.7071 11.2929C28.5196 11.1054 28.2652 11 28 11Z" fill="white"/>
                   <path d="M12.1099 10.1404C10.7078 9.98045 9.29199 9.98045 7.88987 10.1404C7.62466 10.155 7.3761 10.2744 7.19887 10.4722C7.02165 10.6701 6.93029 10.9302 6.94487 11.1954C6.95946 11.4607 7.07881 11.7092 7.27666 11.8864C7.47451 12.0637 7.73466 12.155 7.99987 12.1404H8.09987C9.35933 12.0004 10.6304 12.0004 11.8899 12.1404C12.1551 12.1696 12.421 12.0922 12.6292 11.9253C12.8374 11.7584 12.9707 11.5157 12.9999 11.2504C13.029 10.9852 12.9517 10.7193 12.7848 10.5111C12.6179 10.303 12.3751 10.1696 12.1099 10.1404Z" fill="white"/>
                   <path d="M19.8899 22.0004C20.6199 22.0704 21.3199 22.1104 22.0199 22.1104C22.7199 22.1104 23.3999 22.1104 24.1099 22.0004C24.372 21.9726 24.6125 21.8425 24.7791 21.6384C24.9458 21.4343 25.0251 21.1727 24.9999 20.9104C24.9698 20.6482 24.8372 20.4087 24.6312 20.2438C24.4251 20.079 24.1623 20.0023 23.8999 20.0304C22.6438 20.1704 21.3761 20.1704 20.1199 20.0304C19.9886 20.0159 19.8557 20.0275 19.7289 20.0644C19.602 20.1013 19.4837 20.1629 19.3806 20.2455C19.1725 20.4124 19.0391 20.6552 19.0099 20.9204C18.9808 21.1856 19.0581 21.4515 19.2251 21.6597C19.392 21.8679 19.6347 22.0012 19.8999 22.0304L19.8899 22.0004Z" fill="white"/>
                   <path d="M16 20C16.7911 20 17.5645 19.7654 18.2223 19.3259C18.8801 18.8864 19.3928 18.2616 19.6955 17.5307C19.9983 16.7998 20.0775 15.9956 19.9231 15.2196C19.7688 14.4437 19.3878 13.731 18.8284 13.1716C18.269 12.6122 17.5563 12.2312 16.7804 12.0769C16.0044 11.9225 15.2002 12.0017 14.4693 12.3045C13.7384 12.6072 13.1136 13.1199 12.6741 13.7777C12.2346 14.4355 12 15.2089 12 16C12 17.0609 12.4214 18.0783 13.1716 18.8284C13.9217 19.5786 14.9391 20 16 20ZM16 14C16.3956 14 16.7822 14.1173 17.1111 14.3371C17.44 14.5568 17.6964 14.8692 17.8478 15.2346C17.9991 15.6001 18.0387 16.0022 17.9616 16.3902C17.8844 16.7781 17.6939 17.1345 17.4142 17.4142C17.1345 17.6939 16.7781 17.8844 16.3902 17.9616C16.0022 18.0387 15.6001 17.9991 15.2346 17.8478C14.8692 17.6964 14.5568 17.44 14.3371 17.1111C14.1173 16.7822 14 16.3956 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14Z" fill="white"/>
           </svg>
-        <p class = "card-about__title">Всего начислено</p>
+        
       </div>
-      <p class = "card-about__information">{{ summ }}</p>
+      <div class = "card-about__flex-content-text">
+        <div class = "card-about__title">Всего начислено</div>
+        <div class = "card-about__information">{{ summ }}</div>
+      </div>
+      
     </div>
     <div class = "card-about__divider"></div>
-    <div class = "card-about__column">
-      <div class = "card-about__flex-content">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 23" fill="none">
+    <div class = "card-about__flex-content card-about__column">
+      <div>
+          <svg class = "card-about__svg"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 23" fill="none">
                       <path d="M27.3633 0H2.63672C1.18283 0 0 1.34054 0 2.98828V19.1914C0 20.8391 1.18283 22.1797 2.63672 22.1797H27.3633C28.8172 22.1797 30 20.8391 30 19.1914V2.98828C30 1.34054 28.8172 0 27.3633 0ZM28.2422 19.1914C28.2422 19.7407 27.8479 20.1875 27.3633 20.1875H2.63672C2.15209 20.1875 1.75781 19.7407 1.75781 19.1914V7.37109H28.2422V19.1914ZM28.2422 5.37891H1.75781V2.98828C1.75781 2.43904 2.15209 1.99219 2.63672 1.99219H27.3633C27.8479 1.99219 28.2422 2.43904 28.2422 2.98828V5.37891Z" fill="url(#paint0_linear_0_238)"/>
                       <path d="M5.625 16.8672H13.125C13.6104 16.8672 14.0039 16.4212 14.0039 15.8711C14.0039 15.321 13.6104 14.875 13.125 14.875H5.625C5.13961 14.875 4.74609 15.321 4.74609 15.8711C4.74609 16.4212 5.13961 16.8672 5.625 16.8672Z" fill="url(#paint1_linear_0_238)"/>
                       <path d="M5.625 12.6172H13.125C13.6104 12.6172 14.0039 12.1712 14.0039 11.6211C14.0039 11.071 13.6104 10.625 13.125 10.625H5.625C5.13961 10.625 4.74609 11.071 4.74609 11.6211C4.74609 12.1712 5.13961 12.6172 5.625 12.6172Z" fill="url(#paint2_linear_0_238)"/>
@@ -117,24 +123,32 @@
                         </linearGradient>
                       </defs>
           </svg>
-        <p class = "card-about__title">Оплатили тариф</p>
+        
       </div>
-      <p class = "card-about__information">{{ count_of_pays }} чел</p>
+      <div class = "card-about__flex-content-text">
+        <div class = "card-about__title">Оплатили тариф</div>
+        <div class = "card-about__information">{{ count_of_pays }} чел</div>
+      </div>
+      
     </div>
     <div class = "card-about__divider"></div>
-    <div class = "card-about__column">
-      <div class = "card-about__flex-content">
-          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 35 32" fill="none">
+    <div class = "card-about__flex-content card-about__column">
+      <div>
+          <svg class = "card-about__svg"  xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 35 32" fill="none">
               <path d="M31.5613 9.23599C31.6707 9.7062 31.7235 10.1859 31.7188 10.6667V21.3333C31.8044 22.0089 31.7218 22.6934 31.4773 23.3356C31.2327 23.9779 30.8325 24.5613 30.3066 25.0422C29.7806 25.5231 29.1425 25.889 28.44 26.1126C27.7376 26.3362 26.9889 26.4116 26.25 26.3333H13.125C12.8349 26.3333 12.5567 26.228 12.3516 26.0404C12.1465 25.8529 12.0313 25.5985 12.0313 25.3333C12.0313 25.0681 12.1465 24.8138 12.3516 24.6262C12.5567 24.4387 12.8349 24.3333 13.125 24.3333H26.25C28.5498 24.3333 29.5313 23.436 29.5313 21.3333V14.3333H26.25C25.9599 14.3333 25.6817 14.228 25.4766 14.0404C25.2715 13.8529 25.1563 13.5985 25.1563 13.3333C25.1563 13.0681 25.2715 12.8138 25.4766 12.6262C25.6817 12.4387 25.9599 12.3333 26.25 12.3333H29.5313V10.6667C29.535 10.3317 29.4998 9.99743 29.4263 9.66932C29.3704 9.41293 29.4266 9.14674 29.5828 8.92777C29.739 8.7088 29.9828 8.55446 30.2619 8.4978C30.541 8.44114 30.8334 8.48668 31.0762 8.62466C31.3191 8.76264 31.4932 8.98208 31.5613 9.23599ZM5.14792 28.7067C4.94058 28.8833 4.66635 28.9795 4.38299 28.9749C4.09963 28.9703 3.82928 28.8654 3.62889 28.6822C3.42849 28.4989 3.3137 28.2518 3.30871 27.9927C3.30371 27.7336 3.40889 27.4829 3.60209 27.2933L5.47167 25.584C4.72866 25.1153 4.1346 24.4752 3.74987 23.7286C3.36514 22.982 3.20346 22.1556 3.28125 21.3333V10.6667C3.19561 9.99111 3.27816 9.3066 3.52271 8.66434C3.76726 8.02208 4.16748 7.43868 4.69345 6.9578C5.21941 6.47692 5.85749 6.111 6.55997 5.88741C7.26244 5.66382 8.01112 5.58836 8.75 5.66666H26.25C26.5664 5.66733 26.8825 5.68558 27.1965 5.72132L29.8521 3.29332C30.0594 3.11668 30.3337 3.02052 30.617 3.02509C30.9004 3.02966 31.1707 3.13461 31.3711 3.31783C31.5715 3.50104 31.6863 3.74822 31.6913 4.00729C31.6963 4.26636 31.5911 4.51709 31.3979 4.70666L5.14792 28.7067ZM5.46875 10.6667V12.3333H19.9631L25.0673 7.66666H8.75C6.45021 7.66666 5.46875 8.56399 5.46875 10.6667ZM7.09917 24.096L10.484 21H10.2083C9.91825 21 9.64006 20.8946 9.43494 20.7071C9.22982 20.5196 9.11459 20.2652 9.11459 20C9.11459 19.7348 9.22982 19.4804 9.43494 19.2929C9.64006 19.1053 9.91825 19 10.2083 19H12.6715L17.7756 14.3333H5.46875V21.3333C5.46875 23.1733 6.25771 23.8227 7.09917 24.096Z" fill="white"/>
           </svg>
-        <p class = "card-about__title">Без оплаты</p>
+        
       </div>
-      <p class = "card-about__information">{{ count_without_paying }} чел</p>
+      <div class = "card-about__flex-content-text">
+        <div class = "card-about__title">Без оплаты</div>
+        <div class = "card-about__information">{{ count_without_paying }} чел</div>
+      </div>
+      
     </div>
     <div class = "card-about__divider"></div>
-    <div class = "card-about__column card-about__column-item-5">
-      <div class = "card-about__flex-content">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 43" fill="none">
+    <div class = "card-about__flex-content card-about__column">
+      <div>
+          <svg class = "card-about__svg"  xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 43" fill="none">
               <path d="M28.7945 18.639H0.895099C0.400783 18.639 0 19.0701 0 19.6018V34.3728C0 34.905 0.400783 35.3356 0.895099 35.3356H28.7945C29.2896 35.3356 29.6905 34.9044 29.6905 34.3728V19.6022C29.6905 19.0707 29.2889 18.639 28.7945 18.639ZM27.8994 30.3738C27.6505 30.2626 27.3779 30.2005 27.0924 30.2005C25.9351 30.2005 24.9964 31.2096 24.9964 32.4542C24.9964 32.7971 25.0696 33.1199 25.1968 33.4105H4.43968C4.56611 33.1199 4.63932 32.7964 4.63932 32.4542C4.63932 31.2097 3.70133 30.2005 2.54404 30.2005C2.27785 30.2005 2.02524 30.2557 1.79103 30.3532V23.4756C2.02524 23.5721 2.27785 23.6284 2.54404 23.6284C3.70133 23.6284 4.63932 22.6193 4.63932 21.3748C4.63932 21.0893 4.58843 20.817 4.49798 20.5656H25.1383C25.0481 20.8165 24.9963 21.089 24.9963 21.3748C24.9963 22.6182 25.935 23.6284 27.0923 23.6284C27.3775 23.6284 27.65 23.5662 27.8993 23.4541L27.8994 30.3738ZM10.5304 23.6403H12.5003C11.517 24.4241 10.8762 25.6774 10.8762 27.0933C10.8762 28.3887 11.411 29.5473 12.2533 30.3357H10.5307V32.4547H19.16V30.3357H17.5017C18.3441 29.5473 18.8781 28.3887 18.8781 27.0933C18.8781 25.6774 18.2382 24.424 17.2545 23.6403H19.1595V21.5218H10.5304V23.6403ZM13.451 25.8262C13.451 24.9465 14.1138 24.2335 14.9324 24.2335C15.7509 24.2335 16.4145 24.9465 16.4145 25.8262C16.4145 26.3863 16.1446 26.8777 15.7375 27.1618C16.5101 27.4686 17.0628 28.2652 17.0628 29.2031H13.0118C13.0118 28.3167 13.5043 27.5568 14.2105 27.2158C13.7571 26.9444 13.451 26.4241 13.451 25.8262ZM34.6691 14.2779V29.0485C34.6691 29.5802 34.2689 30.0113 33.773 30.0113H30.5146V25.6239C30.8973 25.1659 31.4533 24.8759 32.0721 24.8759C32.3567 24.8759 32.6292 24.9375 32.8779 25.0498V18.1295C32.6305 18.2407 32.358 18.3029 32.0721 18.3029C30.915 18.3029 29.9757 17.2941 29.9757 16.0492C29.9757 15.7638 30.0269 15.4914 30.1184 15.2401H9.4767C9.56674 15.4914 9.61787 15.7639 9.61787 16.0492C9.61787 16.7456 9.32445 17.3674 8.86337 17.7806H4.97872V14.2774C4.97872 13.7451 5.3795 13.3146 5.87473 13.3146H33.773C34.2678 13.3146 34.6691 13.7455 34.6691 14.2779ZM24.1384 16.197V17.7806H15.5091V16.197H24.1384Z" fill="url(#paint0_linear_0_231)"/>
               <defs>
                 <linearGradient id="paint0_linear_0_231" x1="20" y1="7.66455" x2="20" y2="35.3356" gradientUnits="userSpaceOnUse">
@@ -143,13 +157,21 @@
                 </linearGradient>
               </defs>
           </svg>
-        <p class = "card-about__title">Выведено средств</p>
+        
       </div>
-      <p class = "card-about__information">{{ funds_withdrawn }}</p>
+      <div class = "card-about__flex-content-text">
+        <div class = "card-about__title">Выведено средств</div>
+        <div class = "card-about__information">{{ funds_withdrawn }}</div>
+      </div>
+      
     </div>
   </v-container>
 
-  <v-container class = "table-create-link">
+  <v-container >
+    <VRow class = "table-create-link">
+        <VCol>
+          <VCard>
+            <VCardTitle>
     <div class = "table-create-link__flex-left">
       <div class = "table-create-link__flex">
        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
@@ -160,6 +182,8 @@
     </div>
       <button class = "table-create-link__button">Добавить ссылку</button>
     </div>
+            </VCardTitle>
+            <VCardText>
     <VDataTable
     :headers="headers"
     :items="data"
@@ -170,10 +194,17 @@
       <span class="text-h6">{{ item.id }}</span>
     </template>
   </VDataTable>
+      </VCardText>
+          </VCard>
+        </VCol>
+      </VRow>
   </v-container>
 
-  <v-container class = "table-referals">
-    <div class = "table-referals__flex-left">
+  <v-container>
+    <VRow class = "table-referals">
+        <VCol>
+          <VCard>
+            <VCardTitle><div class = "table-referals__flex-left">
       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
           <g clip-path="url(#clip0_0_202)">
@@ -190,20 +221,24 @@
           </defs>
       </svg>
       <h1 class = "table-referals__title">Рефералы</h1>
-    </div>
-    <VDataTable
-    :headers="headers_referals"
-    :items="data_referals"
-    :items-per-page="5"
-    class="text-no-wrap table-referals__header-table"
-    >
-    <template #item.id="{ item }">
-      <span class="text-h6">{{ item.id }}</span>
-    </template>
-  </VDataTable>
+    </div></VCardTitle>
+            <VCardText>
+              <VDataTable
+                :headers="headers_referals"
+                :items="data_referals"
+                :items-per-page="5"
+                class="text-no-wrap table-referals__header-table"
+                >
+                <template #item.id="{ item }">
+                  <span class="text-h6">{{ item.id }}</span>
+                </template>
+              </VDataTable>
+            </VCardText>
+          </VCard>
+        </VCol>
+      </VRow>
   </v-container>
 
-  
 
 </template>
 
@@ -211,19 +246,16 @@
 
 export default {
   name: 'RefferalsPage',
-
-  data: () => ({
-    count_of_people: 344,
-    summ: 2345.77,
-    count_of_pays: 14,
-    count_without_paying: 16,
-    funds_withdrawn: "В разработке"
-  })
 }
 </script>
 <script setup>
 import { VDataTable } from 'vuetify/labs/VDataTable'
 // import data from '@/views/demos/forms/tables/data-table/datatable'
+const count_of_people = ref(344);
+const summ = ref(2345.77);
+const count_of_pays = ref(14);
+const count_without_paying = ref(16);
+const funds_withdrawn = ref('В разработке');
 const data = [
   {
     id: 1,
@@ -340,21 +372,29 @@ html, body {width:100%; overflow-x:hidden}
 }
   .card-about__flex-content{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   .card-about__title{
-    text-align: center;
+    text-align: left;
     font-size: 19px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     margin: 0;
-    margin-left: 5px;
+    float: left;
+  }
+  .card-about__flex-content-text{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
   }
   .card-about__information{
+    
+    float: left;
     margin: 0;
-    text-align: center;
+    
+    text-align: left;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -422,26 +462,70 @@ html, body {width:100%; overflow-x:hidden}
     font-size: 23px;
     font-weight: 700;
   }
-  .v-data-table__td{
+  .table-referals__header-table .v-data-table__td{
     background: #00808900 !important;
   }
-  .v-data-table__td{
+  .table-referals__header-table .v-data-table__td{
     background: #00808900 !important;
   }
-  .v-data-table__tr:nth-child(even) {
+  .table-referals__header-table .v-data-table__tr:nth-child(even) {
   background-color: #fbfbfb !important;
 }
 
-.v-data-table__tr:nth-child(odd) {
+.table-referals__header-table .v-data-table__tr:nth-child(odd) {
   background: #f5f2fb !important;
   
 }
-span{
-  font-size: 17px;
+.table-referals__header-table{
+  font-size: 19px !important;
+  font-weight: 500;
+}
+.table-referals__header-table span{
+  font-size: 19px;
   color: #777777;
   font-weight: 600;
 }
+.table-referals__header-table thead{
+  background-color: #E1DBEF;
+}
+.table-referals__header-table{
+  margin-top: 10px;
+}
+.table-referals .v-card--variant-elevated {
+    box-shadow: none;
+}
+.table-referals .v-card--variant-elevated, .v-card--variant-flat {
+    background: none;
+}
+
+.table-create-link .v-card--variant-elevated {
+    box-shadow: none;
+}
+.table-create-link .v-card--variant-elevated, .v-card--variant-flat {
+    background: none;
+}
+@media (max-width: 1280px) {
+  .card-about__title{
+    font-size: 16px;
+  }
+  .card-about__information{
+    font-size: 19px;
+  }
+}
 @media (max-width: 1060px) {
+  .card-about__title{
+    font-size: 19px;
+  }
+  .card-about__information{
+    font-size: 24px;
+  }
+  .card-about__flex-content{
+    align-items: center;
+  }
+  .card-about__svg{
+    height: 40px;
+    width: 40px;
+  }
   .top-card{
     display: flex;
     text-align: center;
@@ -471,7 +555,8 @@ span{
   .card-about__column{
     background: linear-gradient(135deg,#AE83FD, #9155FD);
     width: 100%;
-    margin: 10px 0px 0px 0px;
+    height: 100%;
+    margin-right: 10px;
     padding: 10px 5px;
     border-radius: 6px;
     border: 1px solid #D8E2EF;
@@ -489,11 +574,9 @@ span{
   .v-table__wrapper{
     width: 100% !important;
   }
-}
-@media (max-width: 1060px) {
   .card-about{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 50%);
+    grid-template-columns: 49% 49%;
   }
   .card-about__column-item-5 {
   grid-column: span 2;
@@ -504,9 +587,46 @@ span{
     width: 100%;
   }
 }
+@media (max-width: 800px) {
+  .card-about__title{
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .card-about__information{
+    font-size: 19px;
+  }
+}
+
 @media (max-width: 455px) {
+  .table-create-link__title{
+    font-size: 19px;
+    margin-left: 2px;
+  }
+  .table-create-link__flex{
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+  .card-about__title{
+    font-size: 14px;
+  }
+  .card-about__information{
+    font-size: 16px;
+  }
+  .card-about__svg{
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 370px) {
+  .table-create-link__title{
+    font-size: 16px;
+  }
   .card-about{
     display: block;
+  }
+  .card-about__column{
+    height: auto;
   }
 }
 </style>

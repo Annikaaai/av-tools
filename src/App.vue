@@ -28,7 +28,7 @@ handleSkinChanges()
     <VApp :style="`--v-global-theme-primary: ${hexToRgb(global.current.value.colors.primary)}`">
       <!-- <RouterView />
       <ScrollToTop /> -->
-      <AddManager/>
+      <RefferalsPage/>
     </VApp>
   </VLocaleProvider>
 </template>
