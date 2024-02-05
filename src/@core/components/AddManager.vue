@@ -102,9 +102,36 @@
 
 
     <v-container>
+        <!-- <VRow class = "table-create-link">
+        <VCol>
+          <VCard>
+            <VCardText>
+    <VDataTable
+    :headers="headers"
+    :items="data"
+    :items-per-page="5"
+    class="text-no-wrap table-manager__header-table"
+    >
+        
+    <template #item.id="{ item }">
+      <span class="text-h6">{{ item.id }}</span>
+    </template>
+  </VDataTable>
+      </VCardText>
+          </VCard>
+        </VCol>
+      </VRow> -->
+
+
+
         <VTable class = "table__wrap">
      <thead class = "v-table__background">
       <tr>
+        <th class = "table__text">
+            <VRadio
+                :value="true"
+            />
+        </th>
         <th class = "table__text">
             ID Telegram
         </th>
@@ -128,6 +155,13 @@
         v-for="item in data"
         :key="item.data"
       >
+      
+      <td><VRadioGroup>
+            <VRadio
+              :value="0"
+            /></VRadioGroup>
+        </td>
+    
         <td>
           {{ item.tg_id }}
         </td>
@@ -181,6 +215,7 @@
                     </svg>
                 </button>
             </form>
+            
         <VTable class = "table__wrap">
          <thead class = "v-table__background">
           <tr>
@@ -238,6 +273,14 @@
         
 
         <div class = "settings-wrap">
+            <div class = "text_wrap">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
+                    <path d="M21.8389 10.6432V9.05098H22.074C22.6525 9.05256 23.1246 8.58885 23.1334 8.01088V5.76141C23.1248 5.18309 22.6529 4.71902 22.074 4.71973H9.44594C8.86708 4.71902 8.39516 5.18309 8.38672 5.76141V8.01088C8.39551 8.58885 8.86743 9.05256 9.44594 9.05098H9.68128V10.6432C9.6804 11.3973 10.0243 12.1105 10.6149 12.5796L14.8493 15.9629L10.6981 19.1809C10.0904 19.6488 9.7351 20.3732 9.73756 21.1402V22.8885H9.44594C8.86743 22.8869 8.39551 23.3506 8.38672 23.9286V26.178C8.39516 26.7564 8.86708 27.2204 9.44594 27.2197H22.074C22.6529 27.2204 23.1248 26.7564 23.1334 26.178V23.9286C23.1246 23.3506 22.6525 22.8869 22.074 22.8885H21.8952V21.1512C21.8916 20.3767 21.5286 19.6478 20.9125 19.1779L16.6768 15.9585L20.9059 12.5794C21.4964 12.1103 21.8401 11.397 21.8389 10.6432ZM9.51242 5.84473H22.0077V7.92598H9.51242V5.84473ZM22.0077 26.0947H9.51242V24.0135H10.2033C10.2357 24.0135 10.2684 24.0226 10.3023 24.0226C10.3361 24.0226 10.3692 24.0135 10.4016 24.0135H21.2259C21.2581 24.0135 21.2912 24.0226 21.3249 24.0226C21.3589 24.0226 21.3918 24.0135 21.4239 24.0135H22.0077V26.0947ZM20.7695 21.1512V22.8885H10.8633V21.1402C10.8624 20.7211 11.0564 20.3254 11.3888 20.0698L15.7629 16.679L20.2307 20.0732C20.5677 20.3298 20.7668 20.728 20.7695 21.1512ZM20.2019 11.7009L15.7611 15.2496L11.3188 11.7009C10.9955 11.4449 10.807 11.0554 10.807 10.6432V9.05098H20.7132V10.6432C20.7132 11.0554 20.525 11.4448 20.2019 11.7009Z" fill="#9155FD"/>
+                </svg>
+
+                <h2 class = "links__title">Дни недели и часы работы</h2>
+            </div>
             <div class = "timetable"></div> <!-- дни недели и часы работы -->
 
             <div class = "settings-card">
@@ -327,10 +370,32 @@ const data = [
     actions: ''
   }
 ]
+const headers = [
+{
+    title: 'ID Telegram',
+    key: 'tg_id',
+  },
+  {
+    title: 'Имя аккаунта',
+    key: 'name',
+  },
+  {
+    title: 'Телефон',
+    key: 'phone',
+  },
+  {
+    title: 'Рабочие дни',
+    key: 'days',
+  },
+  {
+    title: 'Действия',
+    key: 'actions',
+  }   
+]
 
 const toggleSwitch = ref(true)
 const toggleFalseSwitch = ref(false)
-
+const radioGroup = ref(1)
 const capitalizedLabel = label => {
   const convertLabelText = label.toString()
   
@@ -416,6 +481,7 @@ td{
     margin: 5px;
 }
 .timetable{
+    margin-top: 10px;
     width: 100%;
     height: 300px;
     background: #c4a6fe;
@@ -459,6 +525,46 @@ td{
     font-weight: 500;
     font-size: 16px !important;
 
+}
+.table-manager__header-table .v-data-table__td{
+    background: #00808900 !important;
+  }
+  .table-manager__header-table .v-data-table__td{
+    background: #00808900 !important;
+  }
+  .table-manager__header-table .v-data-table__tr:nth-child(even) {
+  background-color: #fbfbfb !important;
+}
+
+.table-manager__header-table .v-data-table__tr:nth-child(odd) {
+  background: #f5f2fb !important;
+  
+}
+.table-create-link .v-card--variant-elevated {
+    box-shadow: none;
+}
+/* .table-create-link .v-card--variant-elevated, .v-card--variant-flat {
+    background: none;
+} */
+.table-manager__header-table thead{
+  background-color: #E1DBEF;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  
+}
+.table-manager__header-table{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.table-manager__header-table{
+  font-size: 17px !important;
+  font-weight: 500;
+  color: #494949;
+}
+.table-manager__header-table span{
+  font-size: 19px;
+  color: #494949;
+  font-weight: 500;
 }
 @media(max-width: 730px){
     .timetable_grid{
