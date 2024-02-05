@@ -105,26 +105,26 @@
         <VTable class = "table__wrap">
      <thead class = "v-table__background">
       <tr>
-        <th>
+        <th class = "table__text">
             ID Telegram
         </th>
-        <th>
+        <th class = "table__text">
             Имя аккаунта
         </th>
-        <th>
+        <th class = "table__text">
             Телефон
         </th>
-        <th>
+        <th class = "table__text">
             Рабочие дни
         </th>
-        <th>
+        <th class = "table__text">
             Действия
         </th>
       </tr>
     </thead>
 
     <tbody class = "v-table__background-columns">
-      <tr
+      <tr class = "v-table__background-columns-tr"
         v-for="item in data"
         :key="item.data"
       >
@@ -184,13 +184,13 @@
         <VTable class = "table__wrap">
          <thead class = "v-table__background">
           <tr>
-            <th>
+            <th class = "table__text">
                 ID Профиля
             </th>
-            <th>
+            <th class = "table__text">
                 Имя аккаунта
             </th>
-            <th>
+            <th class = "table__text">
                 Права
             </th>
           </tr>
@@ -448,6 +448,17 @@ td{
 .timetable_grid{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+.table__text{
+    font-size: 18px !important;
+    line-height: 100%;
+    font-weight: 600;
+
+}
+.v-table__background-columns{
+    font-weight: 500;
+    font-size: 16px !important;
+
 }
 @media(max-width: 730px){
     .timetable_grid{
