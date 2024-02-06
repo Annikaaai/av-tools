@@ -102,28 +102,6 @@
 
 
     <v-container>
-        <!-- <VRow class = "table-create-link">
-        <VCol>
-          <VCard>
-            <VCardText>
-    <VDataTable
-    :headers="headers"
-    :items="data"
-    :items-per-page="5"
-    class="text-no-wrap table-manager__header-table"
-    >
-        
-    <template #item.id="{ item }">
-      <span class="text-h6">{{ item.id }}</span>
-    </template>
-  </VDataTable>
-      </VCardText>
-          </VCard>
-        </VCol>
-      </VRow> -->
-
-
-
         <VTable class = "table__wrap">
      <thead class = "v-table__background">
       <tr>
