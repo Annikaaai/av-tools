@@ -1,5 +1,38 @@
+<script setup>
+const News = [
+    {
+        data : '23.01.2023',
+        version : 'v3.2',
+        new_information : 'В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.',
+        fixed_1 : 'Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.',
+        fixed_2 : 'Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.'
+    },
+    {
+        data : '23.01.2023',
+        version : 'v3.2',
+        new_information : 'В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.',
+        fixed_1 : 'Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.',
+        fixed_2 : 'Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.'
+    },
+    {
+        data : '23.01.2023',
+        version : 'v3.2',
+        new_information : 'В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.',
+        fixed_1 : 'Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.',
+        fixed_2 : 'Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.'
+    }
+]
+</script>
+<script>
+export default {
+  name: 'NewsPage' 
+  
+}
+</script> 
+
+
 <template>
-    <v-container class = "top-card">
+    <v-container class = "top-card mt-13 rounded-lg">
       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="33" height="33" fill="#F5F5F5"/>
               <rect width="2170" height="1078" transform="translate(-517 -77)" fill="#F7F7F7"/>
@@ -48,12 +81,13 @@
               </linearGradient>
               </defs>
       </svg>
-      <h1 class = "top-card__h1">AV-Tools</h1>
-      <p class="top-card__text">Новости и обновления сервиса</p>
+      <h1 class = "top-card__h1 ml-2">AV-Tools</h1>
+      <p class="top-card__text mt-0 mr-0 mb-0">Новости и обновления сервиса</p>
   </v-container>
-  <v-container class = "cards_grid">
-    <div class = "right-card__order">
-    <div class = "right-card">
+  <v-container>
+    <div class = "news_cards">
+        <VCol cols = 4 class = "right-card__order">
+            <div class = "right-card right-card__order">
             <p class = "right-card__title">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
             <div class = "right-card__divider"></div>
             
@@ -82,9 +116,9 @@
                 </svg></button>
             </div>
         </div>
-    </div>
-
-        <div class = "cards">
+        </VCol>
+        <VRow>
+        <VCol v-for="item in News" :key="x">
             <div class = "news-anons__title-wrap">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
@@ -107,7 +141,7 @@
 
 
         <div class = "news-card">
-            <p class = "news-card_data">{{data}} | Обновление — {{version}}</p>
+            <p class = "news-card_data">{{item.data}} | Обновление — {{item.version}}</p>
             <div class = "news-card__sections">
                 <div class = "news-card__sections_text">Разделы:</div>
                 <div class = "news-card__sections-ad">Объявления</div>
@@ -122,7 +156,7 @@
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ new_information }}</p>
+                    <p class = "news-card__information-text">{{ item.new_information }}</p>
                 </div>
                 <h2 class = "news-card__title">Исправлено</h2>
                 <div class = "news-card__information-wrap">
@@ -132,7 +166,7 @@
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ fixed_1 }}</p>
+                    <p class = "news-card__information-text">{{ item.fixed_1 }}</p>
                 </div>
                 <div class = "news-card__information-wrap">
                     <div>
@@ -141,91 +175,13 @@
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ fixed_2 }}</p>
+                    <p class = "news-card__information-text">{{ item.fixed_2 }}</p>
                 </div>
             </div>
         </div>
-        <div class = "news-card">
-            <p class = "news-card_data">{{data}} | Обновление — {{version}}</p>
-            <div class = "news-card__sections">
-                <div class = "news-card__sections_text">Разделы:</div>
-                <div class = "news-card__sections-ad">Объявления</div>
-                <div class = "news-card__sections-auto">Автоответчик</div>
-            </div>
-            <div class = "news-card__white-card"> 
-                <h2 class = "news-card__title">Новое</h2>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ new_information }}</p>
-                </div>
-                <h2 class = "news-card__title">Исправлено</h2>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ fixed_1 }}</p>
-                </div>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ fixed_2 }}</p>
-                </div>
-            </div>
-        </div>
-        <div class = "news-card">
-            <p class = "news-card_data">{{data}} | Обновление — {{version}}</p>
-            <div class = "news-card__sections">
-                <div class = "news-card__sections_text">Разделы:</div>
-                <div class = "news-card__sections-ad">Объявления</div>
-                <div class = "news-card__sections-auto">Автоответчик</div>
-            </div>
-            <div class = "news-card__white-card"> 
-                <h2 class = "news-card__title">Новое</h2>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ new_information }}</p>
-                </div>
-                <h2 class = "news-card__title">Исправлено</h2>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ fixed_1 }}</p>
-                </div>
-                <div class = "news-card__information-wrap">
-                    <div>
-                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
-                            <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
-                        </svg> 
-                    </div>
-                    <p class = "news-card__information-text">{{ fixed_2 }}</p>
-                </div>
-            </div>
-        </div>
-        </div>
-
-       
+        </VCol></VRow>
+        
+    </div>
         
   </v-container>
 
@@ -233,20 +189,9 @@
 
 
 </template>
-<script setup>
-const data = ref('23.01.2023');
-const version = ref('v3.2');
-const new_information = ref('В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.');
-const fixed_1 = ref('Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.');
-const fixed_2 = ref('Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.');
-</script>
-<script>
-export default {
-  name: 'NewsPage' 
-  
-}
-</script> 
+
 <style>
+html, body {width:100%; overflow-x:hidden}
 .top-card{
   display: flex;
   align-items: center;
@@ -353,6 +298,11 @@ export default {
     display: grid;
     grid-template-columns: 65% 36%;
 }
+.news_cards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
 .right-card__text-wrap{
     display: flex;
     justify-content: left;
@@ -399,7 +349,36 @@ export default {
     margin: -40px 10px 10px 10px;
     position: relative;
 }
+@media(max-width: 750px){
+    .news_cards{
+        display: block;
+    }
+    .right-card__order{
+        max-width: 100% !important;
+        margin-left: 0px;
+    }
+}
+
+
 @media(max-width: 650px){
+    .top-card{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-card__text{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 5px;
+    text-align: center;
+  }
+  .top-card__h1{
+    display: none;
+  }
     .cards_grid{
         display: block;
     }
@@ -433,6 +412,15 @@ export default {
         border-radius: 17px;
         width: auto;
         padding: 15px 15px 15px 15px;
+    }
+    .news-card__sections{
+        display: block;
+    }
+    .news-card__sections-ad, .news-card__sections-auto{
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        margin-bottom: 10px;
     }
 }
 </style>

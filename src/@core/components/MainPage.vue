@@ -18,14 +18,18 @@ const avWordStatItems = [
   'Поиск по категориям',
   'Высокая скорость работы',
 ]
-const data = '23.01.2023';
-const version = 'v3.2';
-const new_information = 'В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.';
-const fixed_1 = 'Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.';
-const fixed_2 = 'Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.';
+const News = [
+  {
+    data: '23.01.2023',
+    version: 'v3.2',
+    new_information: 'В раздел создания автоответчиков на все сообщения добавлена кнопка быстрой вставки тега, разделяющего автоответ на несколько сообщений.',
+    fixed_1: 'Исправлена недоработка, из-за которой при настройке автоответчика на ключевые слова для всего аккаунта Авито не отображалась кнопка предварительного просмотра для первой группы кейвордов.',
+    fixed_2: 'Исправлена некорректная работа «шаблонных ответов» Telegram для объявлений.'
+  }
+]
 </script>
 <template>
-    <v-container class = "top-card">
+    <v-container class = "top-card mt-13 rounded-lg">
         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="33" height="33" fill="#F5F5F5"/>
                 <rect width="2170" height="1078" transform="translate(-517 -77)" fill="#F7F7F7"/>
@@ -74,8 +78,8 @@ const fixed_2 = 'Исправлена некорректная работа «ш
                 </linearGradient>
                 </defs>
         </svg>
-        <h1 class = "top-card__h1">AV-Tools</h1>
-        <p class="top-card__text">Автоматизация авито №1</p>
+        <h1 class = "top-card__h1 ml-3">AV-Tools</h1>
+        <p class="top-card__text mt-0 mr-0 mb-0">Автоматизация авито №1</p>
     </v-container>
 
 
@@ -88,20 +92,20 @@ const fixed_2 = 'Исправлена некорректная работа «ш
       cols="12"
       sm="4"
     > 
-      <VCard class = "avito-card"
+      <VCard class = "rounded-xl"
         to="av-message/stats"
       >
-      <VCardTitle class = "avito-card__title">
-        <div class = "text_wrap">
+      <VCardTitle class = "mt-4">
+        <div class = "d-flex justify-start">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
             <path d="M24.445 5H8.555C6.04041 5.00277 4.00267 7.11505 4 9.72162V26.8195C4 27.2446 4.22063 27.637 4.57783 27.8468C4.93458 28.0562 5.37273 28.0506 5.72458 27.8321L11.6612 24.1405H24.445C26.9596 24.1378 28.9973 22.0255 29 19.4189V9.72162C28.9973 7.11505 26.9596 5.00277 24.445 5ZM26.7225 19.4189C26.7212 20.7224 25.7021 21.7783 24.445 21.7797H11.3458C11.1394 21.7797 10.937 21.8378 10.76 21.948L6.2775 24.7349V9.72162C6.27883 8.41856 7.29793 7.36219 8.555 7.36081H24.445C25.7021 7.36219 26.7212 8.41856 26.7225 9.72162V19.4189Z" fill="#9155FD"/>
         </svg>
-        <div class = "avito-card__title-text">AV-Message</div>
+        <div class = "avito-card__title-text ml-2">AV-Message</div>
         </div>
         
       </VCardTitle>
-        <VCardText class = "avito-card__text">Инструмент, позволяющий автоматизировать коммуникацию с клиентами и увеличить продажи.</VCardText>
+        <VCardText class = "avito-card__text pb-0 pt-2">Инструмент, позволяющий автоматизировать коммуникацию с клиентами и увеличить продажи.</VCardText>
         <VCardText><!-- :items="data" -->
           <VList 
             density="compact"
@@ -121,14 +125,14 @@ const fixed_2 = 'Исправлена некорректная работа «ш
         </VCardText>
         <VBtn
           block
-          class="rounded-t-0 text_wrap__btn"
+          class="rounded-t-0 text_wrap__btn pa-8 d-flex justify-center align-center"
           href="https://t.me/AVMessage_bot"
         >
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.1258 22.3619C19.9305 22.3619 19.7365 22.3041 19.5701 22.1913L13.2841 17.9274L9.91268 20.3533C9.64826 20.5434 9.30744 20.5913 9.00041 20.4815C8.69377 20.3715 8.46088 20.1175 8.37776 19.8026L6.6849 13.3871L0.636131 11.0742C0.255337 10.9286 0.00279388 10.5643 2.30254e-05 10.1566C-0.00274783 9.74886 0.244782 9.38113 0.623728 9.23031L23.6234 0.0785903C23.7277 0.0342567 23.8382 0.00865922 23.9495 0.00179807C23.9894 -0.000576944 24.0294 -0.000576872 24.0691 0.0016662C24.2997 0.0153885 24.5263 0.109334 24.7031 0.28271C24.7214 0.300654 24.7388 0.318995 24.7553 0.338127C24.9018 0.505433 24.9823 0.70942 24.9975 0.917234C25.0011 0.969485 25.0009 1.02239 24.9963 1.0753C24.9931 1.11304 24.9877 1.15065 24.98 1.18799L21.0978 21.5576C21.0354 21.8848 20.8127 22.1587 20.505 22.2863C20.3829 22.337 20.254 22.3619 20.1258 22.3619ZM13.8361 15.9102L19.4354 19.7082L22.4562 3.85843L11.546 14.3568L13.8097 15.8924C13.8188 15.898 13.8275 15.9041 13.8361 15.9102ZM9.17484 15.0656L9.92455 17.9064L11.5398 16.7441L9.42474 15.3093C9.32644 15.2428 9.24226 15.1599 9.17484 15.0656ZM3.71244 10.1314L7.86581 11.7193C8.16335 11.8331 8.38792 12.0832 8.46919 12.3912L8.99592 14.3874C9.02007 14.1571 9.12444 13.9405 9.29399 13.7773L19.6898 3.77398L3.71244 10.1314Z" fill="white"/>
         </svg>
 
-        <div class = "text_wrap__btn-text">Подключить <br class = "card-br"/> тариф</div>
+        <div class = "ml-2">Подключить <br class = "card-br"/> тариф</div>
         </VBtn>
       </VCard>
     </VCol>
@@ -136,21 +140,21 @@ const fixed_2 = 'Исправлена некорректная работа «ш
       cols="12"
       sm="4"
     >
-      <VCard class = "avito-card"
+      <VCard class = "rounded-xl"
         to="av-price"
       >
-      <VCardTitle class = "avito-card__title">
-        <div class = "text_wrap">
+      <VCardTitle class = "mt-4">
+        <div class = "d-flex justify-start">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
                 <path d="M8.5 21.625L4.75 25.3V14.75H8.5M14.75 19.325L12.7875 17.65L11 19.3V9.75H14.75M21 17.25L17.25 21V4.75H21M24.5125 17.0125L22.25 14.75H28.5V21L26.2625 18.7625L17.25 27.7L12.9125 23.925L8.1875 28.5H4.75L12.8375 20.575L17.25 24.3" fill="#9155FD"/>
             </svg>
 
-        <div class = "avito-card__title-text">AV-Price</div>
+        <div class = "avito-card__title-text ml-2">AV-Price</div>
         </div>
         
       </VCardTitle>
-        <VCardText class = "avito-card__text">Инструмент, позволяющий отслеживать цену за клик при тарифе CPC.</VCardText>
+        <VCardText class = "avito-card__text pb-0 pt-2">Инструмент, позволяющий отслеживать цену за клик при тарифе CPC.</VCardText>
         <VCardText>
             <VList 
             density="compact"
@@ -170,14 +174,14 @@ const fixed_2 = 'Исправлена некорректная работа «ш
         </VCardText>
         <VBtn
           block
-          class="rounded-t-0 text_wrap__btn"
+          class="rounded-t-0 text_wrap__btn pa-8 d-flex justify-center align-center"
           href="https://t.me/AVMessage_bot"
         >
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.1258 22.3619C19.9305 22.3619 19.7365 22.3041 19.5701 22.1913L13.2841 17.9274L9.91268 20.3533C9.64826 20.5434 9.30744 20.5913 9.00041 20.4815C8.69377 20.3715 8.46088 20.1175 8.37776 19.8026L6.6849 13.3871L0.636131 11.0742C0.255337 10.9286 0.00279388 10.5643 2.30254e-05 10.1566C-0.00274783 9.74886 0.244782 9.38113 0.623728 9.23031L23.6234 0.0785903C23.7277 0.0342567 23.8382 0.00865922 23.9495 0.00179807C23.9894 -0.000576944 24.0294 -0.000576872 24.0691 0.0016662C24.2997 0.0153885 24.5263 0.109334 24.7031 0.28271C24.7214 0.300654 24.7388 0.318995 24.7553 0.338127C24.9018 0.505433 24.9823 0.70942 24.9975 0.917234C25.0011 0.969485 25.0009 1.02239 24.9963 1.0753C24.9931 1.11304 24.9877 1.15065 24.98 1.18799L21.0978 21.5576C21.0354 21.8848 20.8127 22.1587 20.505 22.2863C20.3829 22.337 20.254 22.3619 20.1258 22.3619ZM13.8361 15.9102L19.4354 19.7082L22.4562 3.85843L11.546 14.3568L13.8097 15.8924C13.8188 15.898 13.8275 15.9041 13.8361 15.9102ZM9.17484 15.0656L9.92455 17.9064L11.5398 16.7441L9.42474 15.3093C9.32644 15.2428 9.24226 15.1599 9.17484 15.0656ZM3.71244 10.1314L7.86581 11.7193C8.16335 11.8331 8.38792 12.0832 8.46919 12.3912L8.99592 14.3874C9.02007 14.1571 9.12444 13.9405 9.29399 13.7773L19.6898 3.77398L3.71244 10.1314Z" fill="white"/>
         </svg>
 
-        <div class = "text_wrap__btn-text">Подключить <br class = "card-br"/> тариф +100 р.мес</div>
+        <div class = "ml-2">Подключить <br class = "card-br"/> тариф +100 р.мес</div>
         </VBtn>
       </VCard>
     </VCol>
@@ -185,21 +189,21 @@ const fixed_2 = 'Исправлена некорректная работа «ш
       cols="12"
       sm="4"
     >
-      <VCard class = "avito-card"
+      <VCard class = "rounded-xl"
         to="av-wordstat"
       >
-      <VCardTitle class = "avito-card__title">
-        <div class = "text_wrap">
+      <VCardTitle class = "mt-4">
+        <div class = "d-flex justify-start">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
                 <path d="M21 16.6275L25.77 8.38125L27.7162 9.50625L21.8325 19.6875L14.5087 15.4688L9.1425 24.75H27.75V27H5.25V6.75H7.5V23.1075L13.6875 12.375L21 16.6275Z" fill="#9155FD"/>
             </svg>
 
-        <div class = "avito-card__title-text">AV-Wordstat</div>
+        <div class = "avito-card__title-text ml-2">AV-Wordstat</div>
         </div>
         
       </VCardTitle>
-        <VCardText class = "avito-card__text">Инструмент, позволяющий отслеживать количество поисковых запросов по категориям.</VCardText>
+        <VCardText class = "avito-card__text pb-0 pt-2">Инструмент, позволяющий отслеживать количество поисковых запросов по категориям.</VCardText>
         <VCardText>
             <VList 
             density="compact"
@@ -207,7 +211,7 @@ const fixed_2 = 'Исправлена некорректная работа «ш
             v-for="i, x in avMessageItems"
             :key="x"
             >
-                <VListItem class = "list-items">
+                <VListItem class = "list-items m-0">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
@@ -219,61 +223,56 @@ const fixed_2 = 'Исправлена некорректная работа «ш
         </VCardText>
         <VBtn
           block
-          class="rounded-t-0 text_wrap__btn"
+          class="rounded-t-0 text_wrap__btn pa-8 d-flex justify-center align-center"
           href="https://t.me/AVMessage_bot"
         >
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.1258 22.3619C19.9305 22.3619 19.7365 22.3041 19.5701 22.1913L13.2841 17.9274L9.91268 20.3533C9.64826 20.5434 9.30744 20.5913 9.00041 20.4815C8.69377 20.3715 8.46088 20.1175 8.37776 19.8026L6.6849 13.3871L0.636131 11.0742C0.255337 10.9286 0.00279388 10.5643 2.30254e-05 10.1566C-0.00274783 9.74886 0.244782 9.38113 0.623728 9.23031L23.6234 0.0785903C23.7277 0.0342567 23.8382 0.00865922 23.9495 0.00179807C23.9894 -0.000576944 24.0294 -0.000576872 24.0691 0.0016662C24.2997 0.0153885 24.5263 0.109334 24.7031 0.28271C24.7214 0.300654 24.7388 0.318995 24.7553 0.338127C24.9018 0.505433 24.9823 0.70942 24.9975 0.917234C25.0011 0.969485 25.0009 1.02239 24.9963 1.0753C24.9931 1.11304 24.9877 1.15065 24.98 1.18799L21.0978 21.5576C21.0354 21.8848 20.8127 22.1587 20.505 22.2863C20.3829 22.337 20.254 22.3619 20.1258 22.3619ZM13.8361 15.9102L19.4354 19.7082L22.4562 3.85843L11.546 14.3568L13.8097 15.8924C13.8188 15.898 13.8275 15.9041 13.8361 15.9102ZM9.17484 15.0656L9.92455 17.9064L11.5398 16.7441L9.42474 15.3093C9.32644 15.2428 9.24226 15.1599 9.17484 15.0656ZM3.71244 10.1314L7.86581 11.7193C8.16335 11.8331 8.38792 12.0832 8.46919 12.3912L8.99592 14.3874C9.02007 14.1571 9.12444 13.9405 9.29399 13.7773L19.6898 3.77398L3.71244 10.1314Z" fill="white"/>
         </svg>
 
-        <div class = "text_wrap__btn-text">Подключить <br class = "card-br"/> тариф +100 р.мес</div>
+        <div class = "ml-2">Подключить <br class = "card-br"/> тариф +100 р.мес</div>
         </VBtn>
       </VCard>
     </VCol>
   </VRow>
-  <div class = "divider_line"></div>
+  <div class = "divider_line mt-12 mb-2"></div>
 </VContainer>
-<v-container class = "cards_grid">
-    <div class = "right-card__order">
-    <div class = "right-card-news">
-            <p class = "right-card__title">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
+<v-container>
+    <div class = "news_cards">
+        <VCol cols = 4 class = "right-card__order rounded-lg">
+            <div class = "right-card">
+            <p class = "right-card__title pt-2 pl-2">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
             <div class = "right-card__divider"></div>
             
-            <div class = "right-card__text-wrap">
+            <div class = "d-flex align-start justify-start">
                 <div>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
                         <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="white" fill-opacity="0.89"/>
                     </svg>
                 </div>
-                <p class = "right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
+                <p class = "ml-2 right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
             </div>
+            <div class = "right-card__opinion-button-center-wrap">
+                <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
+            </div>
+            <div><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
+                
+                <button class = "right-card__textarea-svg">
 
-            <div class = "right-card__news-button-wrap">
-            <button class = "right-card__news-button">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1425_94)">
-                    <path d="M17.9375 21H3.28125C1.47175 21 0 19.5282 0 17.7188V2.40625C0 1.07888 1.07888 0 2.40625 0H13.3438C14.6711 0 15.75 1.07888 15.75 2.40625V2.625H18.5938C19.9211 2.625 21 3.70388 21 5.03125V17.7188C21 19.3953 19.7365 20.7812 18.1116 20.9764C18.0565 20.9921 17.9979 21 17.9375 21ZM15.75 3.9375V17.7188C15.75 18.8046 16.6329 19.6875 17.7188 19.6875C18.8046 19.6875 19.6875 18.8046 19.6875 17.7188V5.03125C19.6875 4.42837 19.1966 3.9375 18.5938 3.9375H15.75ZM2.40625 1.3125C1.80338 1.3125 1.3125 1.80338 1.3125 2.40625V17.7188C1.3125 18.8046 2.19537 19.6875 3.28125 19.6875H15.0955C14.6825 19.1389 14.4375 18.4564 14.4375 17.7188V2.40625C14.4375 1.80338 13.9466 1.3125 13.3438 1.3125H2.40625Z" fill="#9155FD"/>
-                    <path d="M7.21875 7.875H3.28125C2.919 7.875 2.625 7.581 2.625 7.21875V3.28125C2.625 2.919 2.919 2.625 3.28125 2.625H7.21875C7.581 2.625 7.875 2.919 7.875 3.28125V7.21875C7.875 7.581 7.581 7.875 7.21875 7.875ZM3.9375 6.5625H6.5625V3.9375H3.9375V6.5625Z" fill="#9155FD"/>
-                    <path d="M12.4688 4.8125H10.2812C9.919 4.8125 9.625 4.5185 9.625 4.15625C9.625 3.794 9.919 3.5 10.2812 3.5H12.4688C12.831 3.5 13.125 3.794 13.125 4.15625C13.125 4.5185 12.831 4.8125 12.4688 4.8125Z" fill="#9155FD"/>
-                    <path d="M12.4688 10.9375H3.28125C2.919 10.9375 2.625 10.6435 2.625 10.2812C2.625 9.919 2.919 9.625 3.28125 9.625H12.4688C12.831 9.625 13.125 9.919 13.125 10.2812C13.125 10.6435 12.831 10.9375 12.4688 10.9375Z" fill="#9155FD"/>
-                    <path d="M12.4688 14.2188H3.28125C2.919 14.2188 2.625 13.9247 2.625 13.5625C2.625 13.2002 2.919 12.9062 3.28125 12.9062H12.4688C12.831 12.9062 13.125 13.2002 13.125 13.5625C13.125 13.9247 12.831 14.2188 12.4688 14.2188Z" fill="#9155FD"/>
-                    <path d="M12.4688 17.5H3.28125C2.919 17.5 2.625 17.206 2.625 16.8438C2.625 16.4815 2.919 16.1875 3.28125 16.1875H12.4688C12.831 16.1875 13.125 16.4815 13.125 16.8438C13.125 17.206 12.831 17.5 12.4688 17.5Z" fill="#9155FD"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_1425_94">
-                    <rect width="21" height="21" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-                <div class = "text_wrap__btn-text">Перейти в новости</div>
-            </button>
+                <svg width="23" height="25" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8159 7.32493L3.36306 0.32381C2.6278 0.0288319 1.79714 0.158594 1.1953 0.662287C0.593464 1.16606 0.341744 1.94227 0.538456 2.68796L2.09191 8.08981L9.69783 8.30986C10.0478 8.30986 10.3316 8.8517 10.3316 9.19009C10.3316 9.52845 10.0479 10.0703 9.69783 10.0703H2.09191L0.538456 15.6922C0.341744 16.4379 0.593422 17.2141 1.1953 17.7179C1.79836 18.2226 2.62911 18.3507 3.3631 18.0563L20.8159 11.0552C21.6105 10.7365 22.1041 10.0218 22.1041 9.19009C22.1041 8.35838 21.6105 7.64364 20.8159 7.32493Z" fill="#B0B0B0"/>
+                </svg></button>
+                <button class = "right-card__textarea-svg">
+                <svg width="26" height="23" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.518 2.86581C21.0331 1.31904 18.6982 0.0633221 16.0078 2.86581L5.1011 14.2262C5.01712 14.3047 4.01333 15.2865 3.97801 16.7106C3.95603 17.5903 4.30214 18.4103 5.00849 19.1461C5.61123 19.7739 6.33249 20.1001 7.0922 20.0903C8.46879 20.0731 9.49534 18.9924 9.60679 18.8697L17.8122 10.3233C18.119 10.0036 18.1198 9.48697 17.8122 9.16731C17.5053 8.84766 17.0093 8.84766 16.7024 9.16731L8.48449 17.7276C8.28906 17.9369 7.6769 18.4503 7.0663 18.4552C6.73197 18.4577 6.42196 18.3048 6.11823 17.9893C5.72582 17.5805 5.53903 17.1799 5.54688 16.7621C5.56022 16.0206 6.17866 15.4157 6.18494 15.4083L17.1176 4.02179C18.1787 2.91731 19.5184 2.05237 21.4082 4.02179C22.1004 4.74285 22.4434 5.49007 22.4301 6.24383C22.4073 7.48239 21.4435 8.42418 21.4333 8.43399L9.17513 21.0599C9.14845 21.0877 7.63295 22.6835 5.78782 22.6966C4.81699 22.7031 3.89482 22.2584 3.04721 21.3763C-0.156457 18.0391 2.84158 14.7085 2.97029 14.5687L12.3984 4.74694C12.7053 4.42729 12.7053 3.91061 12.3984 3.59014C12.0908 3.27048 11.5948 3.2713 11.2887 3.59014L1.84878 13.4234C0.374871 15.0224 -1.48595 18.9662 1.93668 22.5323C3.09665 23.7397 4.40025 24.3447 5.81137 24.3308C8.32124 24.3079 10.2127 22.2944 10.2919 22.2085L22.5148 9.61859C22.5494 9.5867 23.9526 8.24024 23.9989 6.29615C24.028 5.07313 23.5296 3.91878 22.518 2.86581Z" fill="#B0B0B0"/>
+                </svg></button>
+            </div>
         </div>
-        </div>
-    </div>
-
-        <div class = "cards">
-            <div class = "news-anons__title-wrap">
+        </VCol>
+        <VRow>
+        <VCol v-for="item,x  in News" :key="x">
+            <div class = "d-flex align-center justify-start">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
                     <g clip-path="url(#clip0_1425_594)">
@@ -295,160 +294,218 @@ const fixed_2 = 'Исправлена некорректная работа «ш
 
 
         <div class = "news-card">
-            <p class = "news-card_data">{{data}} | Обновление — {{version}}</p>
+            <p class = "news-card_data">{{item.data}} | Обновление — {{item.version}}</p>
             <div class = "news-card__sections">
                 <div class = "news-card__sections_text">Разделы:</div>
                 <div class = "news-card__sections-ad">Объявления</div>
                 <div class = "news-card__sections-auto">Автоответчик</div>
             </div>
-            <div class = "news-card__white-card"> 
+            <div class = "mt-3 rounded-lg pa-4 news-card__white"> 
                 <h2 class = "news-card__title">Новое</h2>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ new_information }}</p>
+                    <p class = "ml-2 news-card__information-text">{{ item.new_information }}</p>
                 </div>
                 <h2 class = "news-card__title">Исправлено</h2>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ fixed_1 }}</p>
+                    <p class = "ml-2 news-card__information-text">{{ item.fixed_1 }}</p>
                 </div>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ fixed_2 }}</p>
+                    <p class = "ml-2 news-card__information-text">{{ item.fixed_2 }}</p>
                 </div>
             </div>
         </div>
-        </div>
+        </VCol></VRow>
+        
+    </div>
+        
   </v-container>
 
-  <v-container class = "advertisment-grid">
-    <div class = "ad">
-      рекламный банер
-    </div>
-    <div class = "ad">
-      рекламный банер
-    </div>
-    <div class = "ad">
-      рекламный банер
-    </div>
+  <v-container>
+    <VRow>
+      <VCol cols = 4>
+        <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
+          рекламный банер
+        </div>
+      </VCol>
+      <VCol cols = 4>
+        <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
+          рекламный банер
+        </div>
+      </VCol>
+      <VCol cols = 4>
+        <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
+          рекламный банер
+        </div>
+      </VCol>
+    </VRow>
   </v-container>
     
 </template>
 <style>
-.text_wrap{
+html, body {width:100%; overflow-x:hidden}
+.top-card{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 81px;
+  flex-shrink: 0;
+  width: 100%;
+  background: rgba(239, 230, 251, 0.48);
+  border: 1px solid #D8E2EF;
+  line-height: 27.65px;
+}
+  .top-card__h1{
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+  }
+  .top-card__text{
+    margin-left: 64px;
+    color: #5B5B5B;
+    font-size: 23px;
+    font-weight: 400;
+  }
+  .news-card__sections{
     display: flex;
     align-items: center;
     justify-content: left;
-}
-.avito-card__title{
-    margin-top: 15px;
-}
+  }
+  .news-card__title{
+    color: #9155FD;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .news-anons__title{
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+  }
 .avito-card__title-text{
     color: #9155FD !important;
     font-weight: 900 !important;
     font-size: 23px;
-    margin-left: 10px;
-}
-.avito-card{
-    border-radius: 18px !important;
 }
 .avito-card__text{
     font-size: 16px !important;
-    padding-bottom: 0px !important;
-    padding-top: 10px !important;
 }
 .list-items{
     font-size: 19px;
-    margin: 0px !important;
 }
 .text_wrap__btn{
     background: linear-gradient(89.18deg, #9155FD 4.92%, #AE82FE 49.04%, #9155FD 96.84%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
     flex-wrap: nowrap !important;
-    overflow-wrap: break-all !important;
-
-}
-.text_wrap__btn-text{
-    margin-left: 10px;
 }
 .divider_line{
-    margin-top: 50px;
-    margin-bottom: 10px;
     background: rgba(145, 85, 253, 0.27);
     width: 100%;
     height: 2px;
 }
 .right-card-news{
-    margin-left: 30px;
-    margin-right: 0px;
     background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
-    border-radius: 17px;
     width: auto;
-    padding: 15px 15px 15px 15px;
     color: #FFFFFF;
 }
 .right-card__news-button{
     background: #E9DDFF;
-    border-radius: 26px;
     color: #9155FD;
     font-weight: 300;
-    padding: 7px 10px;
     font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.right-card__news-button-wrap{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-.advertisment-grid{
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
 }
 .ad{
   background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
-  padding: 70px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 17px;
-  margin: 0px 10px 10px 10px;
-  margin-right: 10px;
   color: #FFFFFF;
 }
 .card-br{
   display: none;
 }
 
+.news-card__sections-ad{
+    background: #E9DDFF;
+    font-size: 16px;
+    color: #9155FD;
+    border-radius: 26px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+.news-card__sections-auto{
+    background: #D3E6FF;
+    font-size: 16px;
+    color: #2C7BE5;
+    border-radius: 26px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+
+.news_cards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.right-card__order{
+    order: 2;
+}
+.news-card__white{
+  background: #FFFFFF;
+}
+.right-card__order{
+  background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
+  margin-left: 20px;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+.right-card__textarea{
+    background-color: #FFFFFF;
+    border-radius: 17px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+}
+.right-card__textarea-svg{
+    float: right;
+    margin: -40px 10px 10px 10px;
+    position: relative;
+}
+.right-card__opinion-button{
+    background: #E9DDFF;
+    border-radius: 26px;
+    color: #9155FD;
+    font-weight: 300;
+    padding: 7px 10px;
+    font-size: 16px;
+    float: right;
+}
+.right-card__textarea:focus {
+    outline: none !important;
+    border: none;
+}
 @media (max-width: 1280px) {
   .card-br{
     display: block;
   }
 }
 @media (max-width: 785px) {
-  .cards_block{
+  /* .cards_block{
     display: block;
-  }
+  } */
   .cards_block__vcol{
     width: 100%;
   }
@@ -458,8 +515,40 @@ const fixed_2 = 'Исправлена некорректная работа «ш
   .card-br{
     display: none;
   }
+  .news-block{
+    display: block;
+  }
 }
+@media(max-width: 750px){
+    .news_cards{
+        display: block;
+    }
+    .right-card__order{
+        max-width: 100% !important;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 650px) {
+  .top-card{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-card__text{
+    margin-left: 10px;
+    color: #9155FD;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 5px;
+    text-align: center;
+  }
+  .top-card__h1{
+    display: none;
+  }
   .right-card-news{
     margin-left: 0px;
     margin-bottom: 15px;
