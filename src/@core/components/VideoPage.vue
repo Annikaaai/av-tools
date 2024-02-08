@@ -67,7 +67,7 @@ const videos = [
     </v-container>
 
     <v-container>
-      <div class = "videos-block">
+      <VRow class = "videos-block">
         <VCol cols = 4 class = "videos-item" v-for="item, x in videos" :key="x">
           <div>
             <div class = "d-flex align-center justify-start">
@@ -85,7 +85,7 @@ const videos = [
             <div class = "settings-block rounded-lg"></div>
           </div>
         </VCol>
-      </div>
+      </VRow>
     </v-container>
 </template>
 <script>
