@@ -118,7 +118,7 @@ export default {
         </div>
         </VCol>
         <VRow>
-        <VCol v-for="item in News" :key="x">
+        <VCol v-for="item in News" :key="x" class = "NewsCard">
             <div class = "news-anons__title-wrap">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
@@ -361,13 +361,16 @@ html, body {width:100%; overflow-x:hidden}
 
 
 @media(max-width: 650px){
+    .NewsCard{
+        max-width: 100% !important;
+        width: 100%;
+    }
     .top-card{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
-  
   .top-card__text{
     margin-left: 10px;
     color: #9155FD;

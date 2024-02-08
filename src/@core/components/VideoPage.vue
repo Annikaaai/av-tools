@@ -13,7 +13,7 @@ const videos = [
 </script>
 
 <template>
-    <v-container class = "top-card d-flex align-center justify-start mt-13 rounded-lg">
+    <v-container class = "top-card d-flex align-center justify-center justify-md-start mt-13 rounded-lg">
         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="33" height="33" fill="#F5F5F5"/>
                 <rect width="2170" height="1078" transform="translate(-517 -77)" fill="#F7F7F7"/>
@@ -62,13 +62,13 @@ const videos = [
                 </linearGradient>
                 </defs>
         </svg>
-        <h1 class = "top-card__h1 ml-2">AV-Tools</h1>
-        <p class="top-card__text mt-0 mr-0 mb-0 ml-16">Видео инструкции</p>
+        <h1 class = "top-card__h1 ml-2 d-none d-md-flex">AV-Tools</h1>
+        <p class="top-card__text mt-0 mr-0 mb-0 ml-md-16 ml-2">Видео инструкции</p>
     </v-container>
 
     <v-container>
-      <VRow class = "videos-block">
-        <VCol cols = 4 class = "videos-item" v-for="item, x in videos" :key="x">
+      <VRow>
+        <VCol cols = 12 sm = 6 md = 4 v-for="item, x in videos" :key="x">
           <div>
             <div class = "d-flex align-center justify-start">
               <div>
@@ -105,12 +105,6 @@ html, body {width:100%; overflow-x:hidden}
   border: 1px solid #D8E2EF;
   line-height: 27.65px;
 }
-.videos-block{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
   .top-card__h1{
     color: #9155FD;
     font-size: 23px;
@@ -123,7 +117,6 @@ html, body {width:100%; overflow-x:hidden}
   }
   .settings-block{
     background: #e7dcf9;
-    /* width: 100%; */
     height: 326px;
   }
   .settings-title{
@@ -136,26 +129,11 @@ html, body {width:100%; overflow-x:hidden}
     font-size: 16px;
   }
 }
-@media (max-width: 700px) {
-  .videos-block{
-    display: block;
-  }
-  .videos-item{
-    max-width: 100% !important;
-    width: 100%;
-  }
+@media (max-width: 960px) {
   .top-card__text{
     color: #9155FD;
     font-size: 23px;
     font-weight: 700;
-  }
-  .top-card__h1{
-    display: none;
-  }
-  .top-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .settings-title{
     font-size: 19px;
