@@ -29,7 +29,7 @@ const News = [
 ]
 </script>
 <template>
-    <v-container class = "top-card mt-13 rounded-lg">
+  <v-container class = "top-card d-flex align-center justify-center justify-md-start mt-13 rounded-lg">
         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="33" height="33" fill="#F5F5F5"/>
                 <rect width="2170" height="1078" transform="translate(-517 -77)" fill="#F7F7F7"/>
@@ -78,19 +78,19 @@ const News = [
                 </linearGradient>
                 </defs>
         </svg>
-        <h1 class = "top-card__h1 ml-3">AV-Tools</h1>
-        <p class="top-card__text mt-0 mr-0 mb-0">Автоматизация авито №1</p>
-    </v-container>
+        <h1 class = "top-card__h1 ml-2 d-none d-md-flex">AV-Tools</h1>
+        <p class="top-card__text mt-0 mr-0 mb-0 ml-md-16 ml-2">Автоматизация авито №1</p>
+  </v-container>
 
 
 
 
 
     <VContainer>
-  <VRow class = "cards_block">
-    <VCol class = "cards_block__vcol"
+  <VRow >
+    <VCol 
       cols="12"
-      sm="4"
+      md="4"
     > 
       <VCard class = "rounded-xl"
         to="av-message/stats"
@@ -106,7 +106,7 @@ const News = [
         
       </VCardTitle>
         <VCardText class = "avito-card__text pb-0 pt-2">Инструмент, позволяющий автоматизировать коммуникацию с клиентами и увеличить продажи.</VCardText>
-        <VCardText><!-- :items="data" -->
+        <VCardText>
           <VList 
             density="compact"
             
@@ -138,7 +138,7 @@ const News = [
     </VCol>
     <VCol
       cols="12"
-      sm="4"
+      md="4"
     >
       <VCard class = "rounded-xl"
         to="av-price"
@@ -187,7 +187,7 @@ const News = [
     </VCol>
     <VCol
       cols="12"
-      sm="4"
+      md="4"
     >
       <VCard class = "rounded-xl"
         to="av-wordstat"
@@ -236,15 +236,15 @@ const News = [
     </VCol>
   </VRow>
   <div class = "divider_line mt-12 mb-2"></div>
-</VContainer>
+    </VContainer>
 <v-container>
-    <div class = "news_cards">
-        <VCol cols = 4 class = "right-card__order rounded-lg">
+    <VRow class = "justify-center">
+      <VCol cols = 11 md = 4 class = "violet-bg rounded-lg">
             <div class = "right-card">
             <p class = "right-card__title pt-2 pl-2">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
             <div class = "right-card__divider"></div>
             
-            <div class = "d-flex align-start justify-start">
+            <div class = "d-sm-flex d-none align-start justify-start ">
                 <div>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
@@ -253,10 +253,10 @@ const News = [
                 </div>
                 <p class = "ml-2 right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
             </div>
-            <div class = "right-card__opinion-button-center-wrap">
+            <div class = "d-flex align-center justify-sm-end justify-center">
                 <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
             </div>
-            <div><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
+            <div class = "d-sm-block d-none"><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
                 
                 <button class = "right-card__textarea-svg">
 
@@ -270,6 +270,7 @@ const News = [
             </div>
         </div>
         </VCol>
+        <VCol cols = 11 md = 8 order-md="first">
         <VRow>
         <VCol v-for="item,x  in News" :key="x">
             <div class = "d-flex align-center justify-start">
@@ -289,7 +290,7 @@ const News = [
                     </clipPath>
                     </defs>
             </svg>
-            <h1 class = "news-anons__title">Новости и анонсы:</h1>
+            <h1 class = "ml-2 news-anons__title">Новости и анонсы:</h1>
         </div>
 
 
@@ -333,24 +334,25 @@ const News = [
             </div>
         </div>
         </VCol></VRow>
+        </VCol>
         
-    </div>
+      </VRow>
         
   </v-container>
 
   <v-container>
     <VRow>
-      <VCol cols = 4>
+      <VCol cols = 12 md = 4>
         <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
           рекламный банер
         </div>
       </VCol>
-      <VCol cols = 4>
+      <VCol cols = 12 md = 4>
         <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
           рекламный банер
         </div>
       </VCol>
-      <VCol cols = 4>
+      <VCol cols = 12 md = 4>
         <div class = "ad px-12 py-16 d-flex align-center justify-center rounded-lg">
           рекламный банер
         </div>
@@ -460,18 +462,15 @@ html, body {width:100%; overflow-x:hidden}
     align-items: flex-start;
     justify-content: center;
 }
-.right-card__order{
-    order: 2;
-}
 .news-card__white{
   background: #FFFFFF;
 }
-.right-card__order{
+.violet-bg{
   background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
-  margin-left: 20px;
   color: #FFFFFF;
   font-weight: 300;
 }
+
 .right-card__textarea{
     background-color: #FFFFFF;
     border-radius: 17px;
@@ -503,15 +502,6 @@ html, body {width:100%; overflow-x:hidden}
   }
 }
 @media (max-width: 785px) {
-  /* .cards_block{
-    display: block;
-  } */
-  .cards_block__vcol{
-    width: 100%;
-  }
-  .cards_block .v-col-sm-4 {
-    max-width: 100%;
-  }
   .card-br{
     display: none;
   }
@@ -530,14 +520,7 @@ html, body {width:100%; overflow-x:hidden}
     }
 }
 
-@media (max-width: 650px) {
-  .top-card{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  
+@media (max-width: 960px) {  
   .top-card__text{
     margin-left: 10px;
     color: #9155FD;
@@ -546,15 +529,9 @@ html, body {width:100%; overflow-x:hidden}
     margin-left: 5px;
     text-align: center;
   }
-  .top-card__h1{
-    display: none;
-  }
   .right-card-news{
     margin-left: 0px;
     margin-bottom: 15px;
-  }
-  .advertisment-grid{
-    display: block;
   }
 }
 @media (max-width: 420px) {

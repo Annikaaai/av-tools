@@ -85,25 +85,25 @@ export default {
       <p class="top-card__text mt-0 mr-0 mb-0">Новости и обновления сервиса</p>
   </v-container>
   <v-container>
-    <div class = "news_cards">
-        <VCol cols = 4 class = "right-card__order">
-            <div class = "right-card right-card__order">
-            <p class = "right-card__title">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
+    <VRow class = "justify-center">
+      <VCol cols = 12 md = 4 class = "violet-bg rounded-lg">
+            <div class = "right-card">
+            <p class = "right-card__title pt-2 pl-2">Узнайте о последних обновлениях и новостях в сфере автоматизации продаж</p>
             <div class = "right-card__divider"></div>
             
-            <div class = "right-card__text-wrap">
+            <div class = "d-sm-flex d-none align-start justify-start ">
                 <div>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7" cy="7" r="7" fill="white" fill-opacity="0.26"/>
                         <path d="M10.8881 6.99924C10.8881 9.14701 9.14701 10.8881 6.99924 10.8881C4.85147 10.8881 3.11035 9.14701 3.11035 6.99924C3.11035 4.85147 4.85147 3.11035 6.99924 3.11035C9.14701 3.11035 10.8881 4.85147 10.8881 6.99924Z" fill="white" fill-opacity="0.89"/>
                     </svg>
                 </div>
-                <p class = "right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
+                <p class = "ml-2 right-card__information-text">Будьте в курсе новых функций, акций и новинок, которые помогут вам оптимизировать процессы продаж и увеличить эффективность вашего бизнеса. </p>
             </div>
-            <div class = "right-card__opinion-button-center-wrap">
+            <div class = "d-flex align-center justify-sm-end justify-center">
                 <button class = "right-card__opinion-button">Ваше мнение и пожелания</button>
             </div>
-            <div><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
+            <div class = "d-sm-block d-none"><textarea class = "right-card__textarea" placeholder= "Введите ваши пожелания" name="" id="" cols="20" rows="10"></textarea>
                 
                 <button class = "right-card__textarea-svg">
 
@@ -117,9 +117,10 @@ export default {
             </div>
         </div>
         </VCol>
+        <VCol cols = 12 md = 8 order-md="first">
         <VRow>
-        <VCol v-for="item in News" :key="x" class = "NewsCard">
-            <div class = "news-anons__title-wrap">
+        <VCol cols = 12 v-for="item,x  in News" :key="x">
+            <div class = "d-flex align-center justify-start">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32.9079" height="32.9079" rx="5" fill="#EFE5FF"/>
                     <g clip-path="url(#clip0_1425_594)">
@@ -136,52 +137,53 @@ export default {
                     </clipPath>
                     </defs>
             </svg>
-            <h1 class = "news-anons__title">Новости и анонсы:</h1>
+            <h1 class = "ml-2 news-anons__title">Новости и анонсы:</h1>
         </div>
 
 
-        <div class = "news-card">
-            <p class = "news-card_data">{{item.data}} | Обновление — {{item.version}}</p>
+        <div class = "mb-5">
+            <p class = "news-card_data mt-7">{{item.data}} | Обновление — {{item.version}}</p>
             <div class = "news-card__sections">
                 <div class = "news-card__sections_text">Разделы:</div>
                 <div class = "news-card__sections-ad">Объявления</div>
                 <div class = "news-card__sections-auto">Автоответчик</div>
             </div>
-            <div class = "news-card__white-card"> 
+            <div class = "mt-3 rounded-lg pa-4 news-card__white"> 
                 <h2 class = "news-card__title">Новое</h2>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ item.new_information }}</p>
+                    <p class = "ml-2">{{ item.new_information }}</p>
                 </div>
                 <h2 class = "news-card__title">Исправлено</h2>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ item.fixed_1 }}</p>
+                    <p class = "ml-2 ml-2">{{ item.fixed_1 }}</p>
                 </div>
-                <div class = "news-card__information-wrap">
+                <div class = "d-flex align-start justify-start">
                     <div>
                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="7" cy="7" r="7" fill="#9155FD" fill-opacity="0.16"/>
                             <path d="M10.8872 6.99924C10.8872 9.14701 9.14604 10.8881 6.99826 10.8881C4.85049 10.8881 3.10937 9.14701 3.10937 6.99924C3.10937 4.85147 4.85049 3.11035 6.99826 3.11035C9.14604 3.11035 10.8872 4.85147 10.8872 6.99924Z" fill="#9155FD" fill-opacity="0.66"/>
                         </svg> 
                     </div>
-                    <p class = "news-card__information-text">{{ item.fixed_2 }}</p>
+                    <p class = "ml-2 ml-2">{{ item.fixed_2 }}</p>
                 </div>
             </div>
         </div>
         </VCol></VRow>
+        </VCol>
         
-    </div>
+      </VRow>
         
   </v-container>
 
@@ -219,11 +221,8 @@ html, body {width:100%; overflow-x:hidden}
     font-weight: 400;
     margin: 0px 0px 0px 70px;
   }
-.news-anons__title-wrap{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-bottom: 15px;
+  .news-card__white{
+  background: #FFFFFF;
 }
 .news-anons__title{
     margin-left: 10px;
@@ -231,22 +230,12 @@ html, body {width:100%; overflow-x:hidden}
     font-size: 23px;
     font-weight: 700;
 }
-.news-card{
-    margin-bottom: 20px;
-}
-.news-card__white-card{
-    background: #FFFFFF;
-    border-radius: 17px;
-    padding: 20px;
-    margin-top: 20px;
-}
 .news-card__sections{
     display: flex;
     align-items: center;
     justify-content: left;
  }
 .news-card_data{
-    margin-top: 30px;
     color: #584D53;
     font-size: 19px;
     font-weight: 500;
@@ -277,39 +266,14 @@ html, body {width:100%; overflow-x:hidden}
     font-size: 20px;
     font-weight: 500;
 }
-.news-card__information-wrap{
-    display: flex;
-    justify-content: left;
-    align-items: baseline;
-}
-.news-card__information-text{
-    margin-left: 10px;
-}
 .right-card{
-    margin-left: 30px;
-    margin-right: 0px;
     background: linear-gradient(111.31deg, #975EFD -1.55%, #C09EFF -1.54%, #9155FD 88.12%);
     border-radius: 17px;
     width: auto;
     padding: 15px 15px 15px 15px;
     color: #FFFFFF;
 }
-.cards_grid{
-    display: grid;
-    grid-template-columns: 65% 36%;
-}
-.news_cards{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-.right-card__text-wrap{
-    display: flex;
-    justify-content: left;
-    align-items: baseline;
-}
 .right-card__information-text{
-    margin-left: 10px;
     font-weight: 300;
 }
 .right-card__opinion-button{
@@ -350,9 +314,6 @@ html, body {width:100%; overflow-x:hidden}
     position: relative;
 }
 @media(max-width: 750px){
-    .news_cards{
-        display: block;
-    }
     .right-card__order{
         max-width: 100% !important;
         margin-left: 0px;
@@ -382,9 +343,6 @@ html, body {width:100%; overflow-x:hidden}
   .top-card__h1{
     display: none;
   }
-    .cards_grid{
-        display: block;
-    }
     .right-card{
         margin: 0px 0px 10px 0px;
     }
@@ -396,7 +354,7 @@ html, body {width:100%; overflow-x:hidden}
         height: 100px;
         margin-top: 15px;
     }
-    .right-card__text-wrap, .right-card__divider{
+    .right-card__divider{
         display: none;
     }
     .right-card{
@@ -419,11 +377,12 @@ html, body {width:100%; overflow-x:hidden}
     .news-card__sections{
         display: block;
     }
-    .news-card__sections-ad, .news-card__sections-auto{
-        width: 100%;
-        text-align: center;
-        margin-left: 0px;
-        margin-bottom: 10px;
-    }
+    .news-card__sections{
+    display: grid;
+    grid-template-columns: repeat(45%);
+  }
+  .news-card__sections-ad, .news-card__sections-auto{
+    margin: 5px 0px 5px 0px;
+  }
 }
 </style>
