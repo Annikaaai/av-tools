@@ -501,7 +501,6 @@ td{
 .v-table__background-columns{
     font-weight: 500;
     font-size: 16px !important;
-
 }
 .table-manager__header-table .v-data-table__td{
     background: #00808900 !important;
@@ -520,9 +519,6 @@ td{
 .table-create-link .v-card--variant-elevated {
     box-shadow: none;
 }
-/* .table-create-link .v-card--variant-elevated, .v-card--variant-flat {
-    background: none;
-} */
 .table-manager__header-table thead{
   background-color: #E1DBEF;
   border-top-right-radius: 10px;
