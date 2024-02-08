@@ -2,7 +2,12 @@
 import { useThemeConfig } from '@core/composable/useThemeConfig';
 import { hexToRgb } from '@layouts/utils';
 import { useTheme } from 'vuetify';
-import TariffsPage from './@core/components/TariffsPage.vue';
+import ManagerPage from './@core/components/ManagerPage.vue';
+// import MainPage from './@core/components/MainPage.vue';
+// import NewsPage from './@core/components/NewsPage.vue';
+// import RefferalsPage from './@core/components/RefferalsPage.vue';
+
+
 
 const {
   syncInitialLoaderTheme,
@@ -25,7 +30,7 @@ handleSkinChanges()
     <VApp :style="`--v-global-theme-primary: ${hexToRgb(global.current.value.colors.primary)}`">
       <!-- <RouterView />
       <ScrollToTop /> -->
-      <TariffsPage/>
+      <ManagerPage/>
     </VApp>
   </VLocaleProvider>
 </template>
